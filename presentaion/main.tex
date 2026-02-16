@@ -1,0 +1,52 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{emoji}
+\usepackage{minted} 
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{positioning} 
+% \usetikzlibrary{fpu}
+
+\usecolortheme{default}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% Code Style Setup
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstset{
+    language=Python,
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\title{The Coding Interview Patterns Playbook}
+\author{Taras Goriachko}
+\date{}
+
+\setbeamertemplate{footline}{
+  \hspace*{1em}\insertshortauthor
+  \hfill
+  \insertframenumber/\inserttotalframenumber
+  \hspace*{1em}
+}
+\setbeamertemplate{navigation symbols}{} 
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+% --- TOGGLE THESE TO TEST INDIVIDUAL SECTIONS ---
+% \input{section0}
+% \input{section1} % Uncomment this and comment the one above to swap
+\input{section11}
+
+\end{document}

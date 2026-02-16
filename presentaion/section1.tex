@@ -1,0 +1,72 @@
+% Section 1 Header
+\section{Section 1 — Two Pointers: The Simplest Powerful Pattern}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Introduction to the Pattern
+\begin{frame}{What is the Two Pointers Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Use two indices (pointers) to iterate through a data structure simultaneously.
+    \item \textbf{Why it works:} It reduces $O(n^2)$ nested loops to a single $O(n)$ pass.
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item The array is \textbf{Sorted}.
+        \item You need to find a pair, a triplet, or a subarray.
+        \item You need to "filter" or "rearrange" an array in-place.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Slide 2: How it Works (Visual Logic)
+\begin{frame}{Pattern Mechanics: Opposite Ends}
+  When searching for a target in a \textbf{Sorted} array:
+  \begin{enumerate}
+    \item \textbf{Left Pointer:} Starts at index $0$.
+    \item \textbf{Right Pointer:} Starts at index $n-1$.
+    \item \textbf{Decision:}
+      \begin{itemize}
+        \item If \textit{sum > target}: Move Right pointer left ($\leftarrow$) to decrease sum.
+        \item If \textit{sum < target}: Move Left pointer right ($\rightarrow$) to increase sum.
+      \end{itemize}
+  \end{enumerate}
+  
+\end{frame}
+
+% Slide 3: Two Sum II - Kotlin Implementation
+\begin{frame}[fragile]{Hero Problem: Two Sum (Sorted)}
+  \begin{minted}[fontsize=\scriptsize, frame=lines]{kotlin}
+fun twoSum(numbers: IntArray, target: Int): IntArray {
+    var left = 0
+    var right = numbers.size - 1
+
+    while (left < right) {
+        val sum = numbers[left] + numbers[right]
+        when {
+            sum == target -> return intArrayOf(left + 1, right + 1)
+            sum < target -> left++
+            else -> right--
+        }
+    }
+    return intArrayOf()
+}
+  \end{minted}
+  \textbf{Time Complexity:} $O(n)$ \\
+  \textbf{Space Complexity:} $O(1)$
+\end{frame}
+
+% Slide 4: Key Takeaways
+\begin{frame}{Two Pointers – Key Takeaways}
+  \begin{itemize}
+    \item \emoji{check-mark-button} \textbf{Space Efficiency:} Usually allows for $O(1)$ extra space.
+    \item \emoji{check-mark-button} \textbf{In-place operations:} Perfect for "Move Zeroes" or "Remove Duplicates."
+    \item \emoji{check-mark-button} \textbf{Pointer Variants:}
+      \begin{itemize}
+        \item \textbf{Opposite Ends:} (Left, Right) $\to$ Searching/Sorting.
+        \item \textbf{Same Direction:} (Slow, Fast) $\to$ Removing elements.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
