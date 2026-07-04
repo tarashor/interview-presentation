@@ -1,0 +1,47 @@
+% Section 6 Header
+\section{Section 6 — Prefix Sum \& Cumulative Patterns}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Prefix Sum Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Precompute cumulative sums of an array: `prefix[i] = nums[0] + ... + nums[i]`.
+    \item \textbf{Why it works:} Allows you to calculate the sum of any subarray `nums[i...j]` in $O(1)$ time:
+      $$\text{Sum}(i, j) = \text{prefix}[j] - \text{prefix}[i-1]$$
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Range sum query problems with static arrays.
+        \item Finding subarrays that sum to a target value $K$.
+        \item Subarrays with properties related to divisibility or modulo arithmetic.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Combining Prefix Sum with HashMap}
+  To find subarrays summing to $K$ in $O(N)$ time:
+  \begin{itemize}
+    \item Maintain running cumulative sum `currentSum`.
+    \item At each step, we look for a previous prefix sum that equals `currentSum - K`.
+    \item Use a HashMap to store frequencies of prefix sums seen so far.
+    \item \textbf{Key Modulo Trick:} For divisibility by $K$, store `currentSum % K` (handling negative mod values properly).
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Subarray Sum Equals K
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/subarray-sum-equals-k/}{Subarray Sum Equals K}}
+    \end{center}
+\end{frame}
+
+% Problem 2: Subarray Sums Divisible by K
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/subarray-sums-divisible-by-k/}{Subarray Sums Divisible by K}}
+    \end{center}
+\end{frame}

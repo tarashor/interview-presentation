@@ -1,5 +1,5 @@
 % Section 1 Header
-\section{Section 1 — Two Pointers: The Simplest Powerful Pattern}
+\section{Section 1 — Course Introduction}
 
 \begin{frame}[c]{\empty}
     \begin{center}
@@ -7,66 +7,89 @@
     \end{center}
 \end{frame}
 
-% Slide 1: Introduction to the Pattern
-\begin{frame}{What is the Two Pointers Pattern?}
+% Requirements slide
+\begin{frame}{Requirements}
   \begin{itemize}
-    \item \textbf{The Core Idea:} Use two indices (pointers) to iterate through a data structure simultaneously.
-    \item \textbf{Why it works:} It reduces $O(n^2)$ nested loops to a single $O(n)$ pass.
-    \item \textbf{Common Triggers:}
+    \item Basic knowledge of any programming language - ideally Kotlin
+    \item Optional: Understanding of the Gradle build system{*}
+    \item \textbf{Preinstalled on computer:}
       \begin{itemize}
-        \item The array is \textbf{Sorted}.
-        \item You need to find a pair, a triplet, or a subarray.
-        \item You need to "filter" or "rearrange" an array in-place.
+        \item IntelliJ IDEA 2024.2.4 (Community Edition)\textsuperscript{**}
+        \item Java 17\textsuperscript{***}
       \end{itemize}
   \end{itemize}
+
+  \vspace{2.0cm}
+  \hrule
+  \vspace{0.3cm}
+  \tiny
+  \textsuperscript{*}\href{Gradle course}{http://udemy.com/course/mastering-gradle/} \\
+  \textsuperscript{*}\href{https://www.jetbrains.com/idea/download/?section=mac}{https://www.jetbrains.com/idea/download/?section=mac} \\
+  \textsuperscript{**}\href{https://adoptium.net/en-GB/temurin/releases/?version=17&os=mac&arch=aarch64&package=jre}{https://adoptium.net/en-GB/temurin/releases/?version=17\&os=mac\&arch=aarch64\&package=jre} \\
 \end{frame}
 
-% Slide 2: How it Works (Visual Logic)
-\begin{frame}{Pattern Mechanics: Opposite Ends}
-  When searching for a target in a \textbf{Sorted} array:
-  \begin{enumerate}
-    \item \textbf{Left Pointer:} Starts at index $0$.
-    \item \textbf{Right Pointer:} Starts at index $n-1$.
-    \item \textbf{Decision:}
-      \begin{itemize}
-        \item If \textit{sum > target}: Move Right pointer left ($\leftarrow$) to decrease sum.
-        \item If \textit{sum < target}: Move Left pointer right ($\rightarrow$) to increase sum.
-      \end{itemize}
-  \end{enumerate}
+% Lesson 1
+\begin{frame}{Welcome to the Course}
+  \begin{itemize}
+    \item Why "Patterns" instead of "Problems"? \only<2->{\emoji{brain}}
+    \item Moving from memorization to intuition \only<3->{\emoji{bulb}}
+    \item The 80/20 Rule: 15 patterns solve 80\% of interviews \only<4->{\emoji{chart-increasing}}
+  \end{itemize}
   
+  \vspace{1cm}
+  \begin{quote}
+    "Don't practice until you get it right. Practice until you can't get it wrong."
+  \end{quote}
 \end{frame}
 
-% Slide 3: Two Sum II - Kotlin Implementation
-\begin{frame}[fragile]{Hero Problem: Two Sum (Sorted)}
-  \begin{minted}[fontsize=\scriptsize, frame=lines]{kotlin}
-fun twoSum(numbers: IntArray, target: Int): IntArray {
-    var left = 0
-    var right = numbers.size - 1
-
-    while (left < right) {
-        val sum = numbers[left] + numbers[right]
-        when {
-            sum == target -> return intArrayOf(left + 1, right + 1)
-            sum < target -> left++
-            else -> right--
-        }
-    }
-    return intArrayOf()
-}
-  \end{minted}
-  \textbf{Time Complexity:} $O(n)$ \\
-  \textbf{Space Complexity:} $O(1)$
-\end{frame}
-
-% Slide 4: Key Takeaways
-\begin{frame}{Two Pointers – Key Takeaways}
+% Lesson 2
+\begin{frame}{How to Use This Course Effectively}
   \begin{itemize}
-    \item \emoji{check-mark-button} \textbf{Space Efficiency:} Usually allows for $O(1)$ extra space.
-    \item \emoji{check-mark-button} \textbf{In-place operations:} Perfect for "Move Zeroes" or "Remove Duplicates."
-    \item \emoji{check-mark-button} \textbf{Pointer Variants:}
-      \begin{itemize}
-        \item \textbf{Opposite Ends:} (Left, Right) $\to$ Searching/Sorting.
-        \item \textbf{Same Direction:} (Slow, Fast) $\to$ Removing elements.
-      \end{itemize}
+    \item \textbf{Course Approach:} We will start by showing the brute-force solution, and then transition to the optimal solution.
+    \item \textbf{In an Interview (Ideal Case):}
+      \begin{enumerate}
+        \item \textbf{Identify:} Recognize pattern triggers in the problem text \only<2->{\emoji{magnifying-glass-tilted-right}}
+        \item \textbf{Trace:} Dry-run the logic on a small input \only<3->{\emoji{pencil}}
+        \item \textbf{Implement:} Code the solution without looking at hints \only<4->{\emoji{keyboard}}
+      \end{enumerate}
+    \item \textbf{If Stuck:} Start with a brute-force solution, optimize what you can, and carefully listen to your interviewer.
   \end{itemize}
+\end{frame}
+
+% Lesson 3
+\begin{frame}{Interview Mindset: Thinking in Patterns}
+  \begin{itemize}
+    \item Stop looking at the "Story" (e.g., "Alice has 3 apples...")
+    \item Start looking at the \textbf{Data Flow}
+  \end{itemize}
+  
+  \begin{table}[]
+    \scriptsize
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Problem Trait} & \textbf{Pattern Strategy} \\ \midrule
+        Finding a sub-segment in a list & Sliding Window \\
+        Searching a sorted range & Binary Search \\
+        Shortest path in unweighted graph & BFS \\ \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+  
+\input{chart}
+
+% Lesson 5
+\begin{frame}{Common Interview Mistakes}
+  \begin{itemize}
+    \item \textbf{Mistake 1:} Starting to code before the logic is 100\% clear \only<2->{\emoji{cross-mark}}
+    \item \textbf{Mistake 2:} Forgetting to state Big O complexity \only<3->{\emoji{cross-mark}}
+    \item \textbf{Mistake 3:} Not testing for $n=0$ or $n=1$ \only<4->{\emoji{cross-mark}}
+  \end{itemize}
+  \vspace{0.5cm}
+  \textbf{Correction:} Think out loud. Your interviewer is your collaborator, not your judge.
+\end{frame}
+
+% Summary
+\begin{frame}{Course Structure}
+  \centering
+  We will discuss the most common patterns and strategies.
 \end{frame}

@@ -1,0 +1,57 @@
+% Section 14 Header
+\section{Section 14 — Union-Find (Disjoint Set)}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Union-Find Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} A data structure that tracks partition of a set into disjoint subsets.
+    \item \textbf{Operations:}
+      \begin{itemize}
+        \item \textbf{Find:} Identify which subset an element belongs to (returns root parent).
+        \item \textbf{Union:} Join two disjoint subsets into a single subset.
+      \end{itemize}
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Dynamic connectivity (are nodes $X$ and $Y$ in the same group?).
+        \item Detecting cycles in undirected graphs.
+        \item Merging accounts, groups, or equivalence sets.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Optimizations: Path Compression \& Union by Rank}
+  Without optimization, a tree can become a line ($O(N)$ lookup).
+  \begin{itemize}
+    \item \textbf{Path Compression:} During `find(x)`, make every node in the search path point directly to the root root. This flattens the tree structure:
+      $$\text{parent}[x] = \text{find}(\text{parent}[x])$$
+    \item \textbf{Union by Rank/Size:} Always attach the smaller tree under the root of the larger tree.
+    \item \textbf{Complexity:} Combined, they achieve nearly constant time operations: $O(\alpha(N))$ where $\alpha$ is the Inverse Ackermann function.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Number of Provinces
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/friend-circles/}{Number of Provinces}}
+    \end{center}
+\end{frame}
+
+% Problem 2: Redundant Connection
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/redundant-connection/}{Redundant Connection}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Accounts Merge
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/accounts-merge/}{Accounts Merge}}
+    \end{center}
+\end{frame}

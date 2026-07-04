@@ -1,137 +1,65 @@
-% --- SLIDE: LONGEST SUBSTRING WITHOUT REPEATS (ANIMATED) ---
-\begin{frame}[fragile]{Longest Substring Without Repeating Characters}
-    \textbf{Problem:} Find length of the longest substring with unique characters.
+% Section 12 Header
+\section{Section 12 — Tree Breadth First Search (BFS)}
 
-    \begin{columns}
-        \begin{column}{0.45\textwidth}
-            \begin{itemize}
-                \item<1-> \textbf{Expand:} Move \texttt{right} pointer.
-                \item<2-> \textbf{Detect:} If \texttt{s[right]} is in Map...
-                \item<3-> \textbf{Jump:} Move \texttt{left} to \texttt{Map[char] + 1}.
-                \item<4-> \textbf{Update:} Update Max Length.
-            \end{itemize}
-
-            \begin{onlyenv}<5->
-            \begin{lstlisting}[language=Kotlin]
-for (right in s.indices) {
-    if (map.containsKey(s[right])) {
-        left = maxOf(left, map[s[right]]!! + 1)
-    }
-    map[s[right]] = right
-    maxL = maxOf(maxL, right - left + 1)
-}
-            \end{lstlisting}
-            \end{onlyenv}
-        \end{column}
-
-        \begin{column}{0.55\textwidth}
-            \centering
-            \textbf{Step-by-Step Window}
-            \vspace{0.5cm}
-
-            \begin{tikzpicture}[scale=0.8]
-                % String: a b c a
-                \foreach \x/\val in {0/a, 1/b, 2/c, 3/a}
-                    \node[draw, minimum size=0.8cm] (c\x) at (\x,0) {\val};
-
-                % State 1: Expanding
-                \draw<1-2>[->, blue, thick] (0,-0.8) -- (0,-0.4) node[below=0.4] {L};
-                \draw<1>[->, red, thick] (0, 0.8) -- (0, 0.4) node[above=0.4] {R};
-                \draw<2>[->, red, thick] (2, 0.8) -- (2, 0.4) node[above=0.4] {R};
-
-                % State 2: Conflict at R=3
-                \draw<3>[->, red, thick] (3, 0.8) -- (3, 0.4) node[above=0.4] {R};
-                \node<3>[red, font=\tiny] at (3, 1.2) {Conflict: 'a'};
-
-                % State 3: The Jump
-                \draw<4->[->, blue, thick] (1,-0.8) -- (1,-0.4) node[below=0.4] {L};
-                \draw<4->[->, red, thick] (3, 0.8) -- (3, 0.4) node[above=0.4] {R};
-                \draw<4->[green, thick, rounded corners] (0.6, -0.5) rectangle (3.4, 0.5);
-            \end{tikzpicture}
-            
-            \vspace{0.5cm}
-            \begin{onlyenv}<1-2> \textit{Expanding window...} \end{onlyenv}
-            \begin{onlyenv}<3> \textit{Duplicate 'a' found! Jump L.} \end{onlyenv}
-            \begin{onlyenv}<4> \textit{New Window: "bca"} \end{onlyenv}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-% --- SLIDE: PERMUTATION IN STRING (ANIMATED) ---
-\begin{frame}[fragile]{Permutation in String: Fixed Window}
-    \textbf{Problem:} Does $s_2$ contain a permutation of $s_1$?
-
+\begin{frame}[c]{\empty}
     \begin{center}
-    \begin{tikzpicture}
-        % Background Array s2: e i d b a c
-        \foreach \x/\val in {0/e, 1/i, 2/d, 3/b, 4/a, 5/c}
-            \node[draw, minimum size=0.7cm] (s\x) at (\x,0) {\val};
-        
-        % Moving Window
-        \draw<1>[blue, ultra thick] (-0.4,-0.4) rectangle (1.4,0.4);
-        \node<1>[blue] at (0.5, -0.8) {Window 1};
-
-        \draw<2>[blue, ultra thick] (0.6,-0.4) rectangle (2.4,0.4);
-        \node<2>[blue] at (1.5, -0.8) {Window 2};
-
-        \draw<3>[green, ultra thick] (2.6,-0.4) rectangle (4.4,0.4);
-        \node<3>[green] at (3.5, -0.8) {Permutation Found!};
-    \end{tikzpicture}
+        \Large\textbf{\secname}
     \end{center}
-
-    \begin{block}{HashMap Slide Logic}<4->
-\begin{lstlisting}[language=Kotlin]
-// 1. Add right character
-s2Map[s2[right]] = s2Map.getOrDefault(s2[right], 0) + 1
-// 2. Remove left character
-if (s2Map[s2[left]] == 1) s2Map.remove(s2[left])
-else s2Map[s2[left]] = s2Map[s2[left]]!! - 1
-// 3. Compare Maps
-if (s1Map == s2Map) return true
-\end{lstlisting}
-    \end{block}
 \end{frame}
 
-% --- SLIDE: SUBARRAYS WITH K DISTINCT (ANIMATED) ---
-\begin{frame}[fragile]{Subarrays with K Different Integers}
-    \textbf{Strategy:} $\text{Exactly}(K) = \text{AtMost}(K) - \text{AtMost}(K-1)$
+% Slide 1: Concept
+\begin{frame}{Tree Breadth First Search (BFS)}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Traverse a tree level-by-level, processing all nodes at depth $d$ before any node at depth $d+1$.
+    \item \textbf{Implementation:} Typically implemented iteratively using a Queue (FIFO).
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Level order traversals or printing.
+        \item Finding the minimum depth of a tree.
+        \item Tracking "level" boundaries (e.g. connecting next pointers).
+        \item Finding the shortest path in unweighted graphs or state transitions.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
 
-    
+\begin{frame}{Level Size Strategy}
+  To process nodes level by level rather than as a continuous queue stream:
+  \begin{itemize}
+    \item At the start of each level iteration, count the queue size: `val levelSize = queue.size`.
+    \item Run a nested loop exactly `levelSize` times.
+    \item Inside the loop:
+      \begin{itemize}
+        \item Pop a node from the queue.
+        \item Enqueue its children (left, then right).
+      \end{itemize}
+    \item Any logic scoped to a level (e.g., calculating level average or reversing order) can be done cleanly.
+  \end{itemize}
+\end{frame}
 
-    \begin{tikzpicture}[scale=0.8]
-        \foreach \x/\val in {0/1, 1/2, 2/1, 3/2, 4/3}
-            \node[draw, minimum size=0.6cm] at (\x,0) {\val};
-        
-        % Animation of R pointer moving
-        \draw<1>[->, red, thick] (0,0.8) -- (0,0.4) node[above=0.4] {R};
-        \node<1> at (6,0) {\scriptsize Subarrays: [1]};
+% Problem 1: Binary Tree Level Order Traversal
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/binary-tree-level-order-traversal/}{Binary Tree Level Order Traversal}}
+    \end{center}
+\end{frame}
 
-        \draw<2>[->, red, thick] (1,0.8) -- (1,0.4) node[above=0.4] {R};
-        \node<2> at (6,0) {\scriptsize Subarrays: [2], [1,2]};
+% Problem 2: Binary Tree Zigzag Level Order Traversal
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/}{Binary Tree Zigzag Level Order Traversal}}
+    \end{center}
+\end{frame}
 
-        \draw<3>[->, red, thick] (2,0.8) -- (2,0.4) node[above=0.4] {R};
-        \node<3> at (6,0) {\scriptsize Subarrays: [1], [2,1], [1,2,1]};
-        
-        \node<4>[blue, thick] at (3,-1) {Total = $\sum (R - L + 1)$};
-    \end{tikzpicture}
+% Problem 3: Populating Next Right Pointers in Each Node
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/populating-next-right-pointers-in-each-node/}{Populating Next Right Pointers in Each Node}}
+    \end{center}
+\end{frame}
 
-    \begin{onlyenv}<5->
-    \begin{lstlisting}[language=Kotlin]
-private fun atMostK(nums: IntArray, k: Int): Int {
-    var L = 0, count = 0, res = 0
-    for (R in nums.indices) {
-        if (map.getOrDefault(nums[R], 0) == 0) k--
-        map[nums[R]] = map.getOrDefault(nums[R], 0) + 1
-        
-        while (k < 0) {
-            map[nums[L]] = map[nums[L]]!! - 1
-            if (map[nums[L]] == 0) k++
-            L++
-        }
-        res += (R - L + 1) // Counts all valid ending at R
-    }
-    return res
-}
-    \end{lstlisting}
-    \end{onlyenv}
+% Problem 4: Word Ladder
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 4: \href{https://leetcode.com/problems/word-ladder/}{Word Ladder}}
+    \end{center}
 \end{frame}

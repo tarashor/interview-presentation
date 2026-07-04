@@ -1,0 +1,52 @@
+% Section 8 Header
+\section{Section 8 — Merge Intervals}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Merge Intervals Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Process overlapping intervals by sorting them and merging adjacent ranges.
+    \item \textbf{Why it works:} Once sorted by start time, overlapping intervals will be adjacent. We can merge them in a single linear pass.
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Finding overlapping ranges, free slots, or busy schedules.
+        \item Inserting new intervals into already sorted ranges.
+        \item Finding intersections of multiple lists of intervals.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Merging Logic}
+  Given two sorted intervals $A$ and $B$, they overlap if:
+  $$B.\text{start} \le A.\text{end}$$
+  If they overlap, we merge them into a single interval $C$ where:
+  $$C.\text{start} = A.\text{start}$$
+  $$C.\text{end} = \max(A.\text{end}, B.\text{end})$$
+  Otherwise, they do not overlap, and we add $A$ to our output list and set $B$ as the new active interval.
+\end{frame}
+
+% Problem 1: Merge Intervals
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/merge-intervals/}{Merge Intervals}}
+    \end{center}
+\end{frame}
+
+% Problem 2: Insert Interval
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/insert-interval/}{Insert Interval}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Employee Free Time
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/employee-free-time/}{Employee Free Time}}
+    \end{center}
+\end{frame}

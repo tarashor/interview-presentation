@@ -1,0 +1,52 @@
+% Section 7 Header
+\section{Section 7 — Cyclic Sort}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Cyclic Sort Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} When an array contains numbers in a range from $1$ to $n$ (or $0$ to $n$), we can sort it in $O(n)$ time and $O(1)$ auxiliary space.
+    \item \textbf{How it works:} Iterate through the array. If the current number `nums[i]` is not at its correct index (i.e. `nums[i] != i + 1`), swap it with the number at its correct index `nums[nums[i] - 1]`. Repeat this until the correct number is at index `i`, then move to the next index.
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Problems dealing with numbers in a continuous range.
+        \item Finding duplicate or missing numbers in an array.
+        \item Finding the first/smallest missing positive number.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Cyclic Sort Mechanics}
+  \begin{itemize}
+    \item \textbf{Index Rule:} A value `val` belongs at index `val - 1` (or index `val` if range is $0$ to $n$).
+    \item \textbf{Loop condition:} We only swap when the target index has a different value:
+      $$\text{nums}[i] \neq \text{nums}[\text{nums}[i] - 1]$$
+    \item \textbf{Complexity analysis:} Although we have a nested loop or repeat swaps at the same index, each swap puts at least one number in its correct position. Thus, at most $N-1$ swaps are performed, leading to $O(N)$ time.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Find All Numbers Disappeared in an Array
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/}{Find All Numbers Disappeared in an Array}}
+    \end{center}
+\end{frame}
+
+% Problem 2: First Missing Positive
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/first-missing-positive/}{First Missing Positive}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Find All Duplicates in an Array
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/find-all-duplicates-in-an-array/}{Find All Duplicates in an Array}}
+    \end{center}
+\end{frame}

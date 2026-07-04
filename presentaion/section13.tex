@@ -1,0 +1,60 @@
+% Section 13 Header
+\section{Section 13 — Matrix Traversal (The "Islands" Pattern)}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Matrix Traversal Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Treat a 2D grid (matrix) as an implicit graph where each cell $(r, c)$ is a node, and its adjacent neighbors (up, down, left, right) are connected by edges.
+    \item \textbf{Traversal:} Use Depth First Search (DFS) or Breadth First Search (BFS) to explore connected regions.
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Counting distinct blocks (e.g. islands, provinces).
+        \item Simulating cell expansion over time (e.g. rotting oranges, fire spreading).
+        \item Finding paths or reachable regions from boundaries.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Matrix Traversal Mechanics}
+  \begin{itemize}
+    \item \textbf{Boundary Check:} Always ensure row `r` and column `c` are valid:
+      $$0 \le r < R \quad \text{and} \quad 0 \le c < C$$
+    \item \textbf{Directions Array:} Use a utility array to iterate over neighbors cleanly:
+      $$\text{dirs} = [(-1, 0), (1, 0), (0, -1), (0, 1)]$$
+    \item \textbf{Visited Tracking:} Mark grid cells as visited (e.g., set `'1'` to `'0'` in-place if allowed, or use a `visited` boolean matrix) to prevent infinite loops.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Number of Islands
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/number-of-islands/}{Number of Islands}}
+    \end{center}
+\end{frame}
+
+% Problem 2: Max Area of Island
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/max-area-of-island/}{Max Area of Island}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Rotting Oranges
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/rotting-oranges/}{Rotting Oranges}}
+    \end{center}
+\end{frame}
+
+% Problem 4: Pacific Atlantic Water Flow
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 4: \href{https://leetcode.com/problems/pacific-atlantic-water-flow/}{Pacific Atlantic Water Flow}}
+    \end{center}
+\end{frame}

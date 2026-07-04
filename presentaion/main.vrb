@@ -1,46 +1,32 @@
-\frametitle{Problem 2: Container With Most Water}
-\textbf{Goal:} Find two lines that together with the x-axis forms a container, such that the container contains the most water.
+\frametitle{Permutation in String: Fixed Window}
+\textbf{Problem:} Does $s_2$ contain a permutation of $s_1$?
 
-    \begin{columns}[T]
-        \begin{column}{0.45\textwidth}
-            \begin{block}{The Algorithm}
-            \small
-            \begin{enumerate}
-                \item $i = 0, j = n-1$.
-                \item $Area = \min(h[i], h[j]) \times (j - i)$.
-                \item Update $maxArea$ if current is larger.
-                \item \textbf{Crucial:} Move the pointer pointing to the \textbf{shorter} line.
-            \end{enumerate}
-            \end{block}
+    \begin{center}
+    \begin{tikzpicture}
+        % Background Array s2: e i d b a c
+        \foreach \x/\val in {0/e, 1/i, 2/d, 3/b, 4/a, 5/c}
+            \node[draw, minimum size=0.7cm] (s\x) at (\x,0) {\val};
 
-            \begin{block}{Complexity}
-            \small
-            \begin{itemize}
-                \item \textbf{Time:} $O(N)$
-                \item \textbf{Space:} $O(1)$
-            \end{itemize}
-            \end{block}
-        \end{column}
+        % Moving Window
+        \draw<1>[blue, ultra thick] (-0.4,-0.4) rectangle (1.4,0.4);
+        \node<1>[blue] at (0.5, -0.8) {Window 1};
 
-        \begin{column}{0.52\textwidth}
-            \begin{exampleblock}{Kotlin Implementation}
-\begin{lstlisting}[language=Kotlin, basicstyle=\tiny\ttfamily, keywordstyle=\color{blue}]
-fun maxArea(height: IntArray): Int {
-    var max = 0
-    var i = 0
-    var j = height.size - 1
+        \draw<2>[blue, ultra thick] (0.6,-0.4) rectangle (2.4,0.4);
+        \node<2>[blue] at (1.5, -0.8) {Window 2};
 
-    while (i < j) {
-        val h = minOf(height[i], height[j])
-        val w = j - i
-        max = maxOf(max, h * w)
+        \draw<3>[green, ultra thick] (2.6,-0.4) rectangle (4.4,0.4);
+        \node<3>[green] at (3.5, -0.8) {Permutation Found!};
+    \end{tikzpicture}
+    \end{center}
 
-        if (height[i] < height[j]) i++
-        else j--
-    }
-    return max
-}
+    \begin{block}{HashMap Slide Logic}<4->
+\begin{lstlisting}[language=Kotlin]
+// 1. Add right character
+s2Map[s2[right]] = s2Map.getOrDefault(s2[right], 0) + 1
+// 2. Remove left character
+if (s2Map[s2[left]] == 1) s2Map.remove(s2[left])
+else s2Map[s2[left]] = s2Map[s2[left]]!! - 1
+// 3. Compare Maps
+if (s1Map == s2Map) return true
 \end{lstlisting}
-            \end{exampleblock}
-        \end{column}
-    \end{columns}
+    \end{block}

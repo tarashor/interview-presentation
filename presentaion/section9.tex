@@ -1,0 +1,63 @@
+% Section 9 Header
+\section{Section 9 — Modified Binary Search}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is Modified Binary Search?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} An extension of standard binary search that applies to non-standard sorted structures or search spaces.
+    \item \textbf{Why it works:} By dividing the search space in half in $O(1)$ time, we achieve a logarithmic $O(\log N)$ runtime.
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Searching in a rotated sorted array.
+        \item Finding boundaries, peaks, or transition points.
+        \item \textbf{Binary Search on Answers:} When checking if a candidate answer is valid takes $O(N)$ time, and the answer is monotonic, we search the answer range.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Binary Search on Answer Space}
+  Instead of searching indices in an array, we search value ranges (from `minPossibleAnswer` to `maxPossibleAnswer`):
+  \begin{itemize}
+    \item Find the midpoint `mid` of the current range.
+    \item Run a validation function `isValid(mid)` to check if `mid` is a possible solution (usually in $O(N)$ time).
+    \item Based on the result:
+      \begin{itemize}
+        \item If valid: Try to find a better solution in the lower half (if minimizing).
+        \item If invalid: Discard the lower half and search the upper half.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Search in Rotated Sorted Array
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/search-in-rotated-sorted-array/}{Search in Rotated Sorted Array}}
+    \end{center}
+\end{frame}
+
+% Problem 2: Find Minimum in Rotated Sorted Array
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/}{Find Minimum in Rotated Sorted Array}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Capacity To Ship Packages Within D Days
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/}{Capacity To Ship Packages Within D Days}}
+    \end{center}
+\end{frame}
+
+% Problem 4: Pow(x, n)
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 4: \href{https://leetcode.com/problems/powx-n/}{Pow(x, n)}}
+    \end{center}
+\end{frame}

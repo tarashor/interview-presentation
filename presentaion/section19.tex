@@ -1,0 +1,50 @@
+% Section 19 Header
+\section{Section 19 — Data Streams \& Online Algorithms}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{Data Streams \& Online Algorithms}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Process data that arrives continuously over time, rather than having the entire dataset available in memory upfront.
+    \item \textbf{Constraint:} Algorithms must run in real-time with limited space ($O(1)$ or $O(K)$ where $K$ is the query window size) and time complexity per element.
+    \item \textbf{Key Techniques:}
+      \begin{itemize}
+        \item \textbf{Two Heaps:} Balancing a Max-Heap and Min-Heap to find median in $O(1)$ time.
+        \item \textbf{Reservoir Sampling:} Selecting a random sample from a stream of unknown size.
+        \item \textbf{Double Linked List + HashMap:} Designing fast cache policies (like LRU/LFU cache) with $O(1)$ insertion, lookup, and deletion.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Find Median from Data Stream
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/find-median-from-data-stream/}{Find Median from Data Stream}}
+    \end{center}
+\end{frame}
+
+% Problem 2: Random Pick Index
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/random-pick-index/}{Random Pick Index}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Moving Average from Data Stream
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/moving-average-from-data-stream/}{Moving Average from Data Stream}}
+    \end{center}
+\end{frame}
+
+% Problem 4: LRU Cache
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 4: \href{https://leetcode.com/problems/lru-cache/}{LRU Cache}}
+    \end{center}
+\end{frame}

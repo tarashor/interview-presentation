@@ -1,0 +1,57 @@
+% Section 5 Header
+\section{Section 5 — Monotonic Stack}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is a Monotonic Stack?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} A stack that maintains elements in a strictly increasing or decreasing order.
+    \item \textbf{How it works:} When a new element is processed, we pop all elements from the stack that violate the monotonic property before pushing the new element.
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Finding the "next greater" or "previous smaller" element in an array.
+        \item Computing areas bounded by heights (e.g. histograms, trapping water).
+        \item Resolving queries in $O(N)$ total time where each index is pushed/popped at most once.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Monotonic Stack: Types}
+  \begin{itemize}
+    \item \textbf{Monotonic Increasing Stack:} Stack elements are sorted in ascending order from bottom to top (e.g. `[1, 3, 5, 8]`). Useful to find the first smaller element to the left/right.
+    \item \textbf{Monotonic Decreasing Stack:} Stack elements are sorted in descending order from bottom to top (e.g. `[9, 7, 4, 2]`). Useful to find the first larger element to the left/right.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Daily Temperatures
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/daily-temperatures/}{Daily Temperatures}}
+    \end{center}
+\end{frame}
+
+% Problem 2: Next Greater Element I
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/next-greater-element-i/}{Next Greater Element I}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Trapping Rain Water
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/trapping-rain-water/}{Trapping Rain Water}}
+    \end{center}
+\end{frame}
+
+% Problem 4: Largest Rectangle in Histogram
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 4: \href{https://leetcode.com/problems/largest-rectangle-in-histogram/}{Largest Rectangle in Histogram}}
+    \end{center}
+\end{frame}

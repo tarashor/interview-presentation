@@ -1,0 +1,57 @@
+% Section 10 Header
+\section{Section 10 — Fast \& Slow Pointers}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Fast \& Slow Pointers Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Use two pointers traversing a linear data structure (linked list/array) at different speeds.
+    \item \textbf{Why it works:} If there is a cycle, the fast pointer (moving 2 steps at a time) will eventually meet the slow pointer (moving 1 step at a time) in $O(N)$ time and $O(1)$ space.
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Cycle detection in a linked list.
+        \item Finding the starting node of a cycle.
+        \item Finding the middle node of a list (when the fast pointer reaches the end, the slow pointer is in the middle).
+        \item Identifying duplicates in structures where values can be treated as indices.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Cycle Detection Mechanics}
+  \begin{itemize}
+    \item \textbf{Initialize:} `slow = head`, `fast = head`.
+    \item \textbf{Advance:}
+      \begin{itemize}
+        \item `slow = slow.next`
+        \item `fast = fast.next.next`
+      \end{itemize}
+    \item \textbf{Check:} If `slow == fast`, a cycle is detected! If `fast` or `fast.next` is null, there is no cycle.
+    \item \textbf{Cycle Start (Floyd's algorithm):} Once met, reset `slow` to `head`. Move both pointers 1 step at a time. The point where they meet again is the start of the cycle.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Linked List Cycle
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/linked-list-cycle/}{Linked List Cycle}}
+    \end{center}
+\end{frame}
+
+% Problem 2: Middle of the Linked List
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/middle-of-the-linked-list/}{Middle of the Linked List}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Find the Duplicate Number
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/find-the-duplicate-number/}{Find the Duplicate Number}}
+    \end{center}
+\end{frame}

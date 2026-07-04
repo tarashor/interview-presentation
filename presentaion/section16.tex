@@ -1,0 +1,78 @@
+% Section 16 Header
+\section{Section 16 — Dynamic Programming}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is Dynamic Programming (DP)?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Solve complex problems by breaking them down into simpler, overlapping subproblems and caching their results to avoid redundant calculations.
+    \item \textbf{Key Properties:}
+      \begin{itemize}
+        \item \textbf{Overlapping Subproblems:} Solving the same subproblems repeatedly.
+        \item \textbf{Optimal Substructure:} The optimal solution of the problem can be constructed from optimal solutions of its subproblems.
+      \end{itemize}
+    \item \textbf{Approaches:}
+      \begin{itemize}
+        \item \textbf{Top-Down (Memoization):} Recursive, start from target, solve subproblems and save values in a cache.
+        \item \textbf{Bottom-Up (Tabulation):} Iterative, start from base cases, fill a table (array/matrix) up to target.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dynamic Programming Sub-patterns}
+  Most interview DP problems fall into standard subclasses:
+  \begin{itemize}
+    \item **Fibonacci Numbers:** `dp[i] = dp[i-1] + dp[i-2]` (Climbing Stairs).
+    \item **0/1 Knapsack:** Items can be chosen at most once. Decide to include or exclude an item: `dp[i][w] = max(exclude, include)`.
+    \item **Unbounded Knapsack / Coin Change:** Items can be chosen multiple times.
+    \item **Longest Common Subsequence (LCS) / Edit Distance:** String matching.
+    \item **Longest Increasing Subsequence (LIS):** Decisions based on previous elements.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Climbing Stairs
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/climbing-stairs/}{Climbing Stairs}}
+    \end{center}
+\end{frame}
+
+% Problem 2: 0/1 Knapsack (Concept)
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Concept: 0/1 Knapsack}
+    \end{center}
+\end{frame}
+
+% Problem 3: Coin Change
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/coin-change/}{Coin Change}}
+    \end{center}
+\end{frame}
+
+% Problem 4: Coin Change 2
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 4: \href{https://leetcode.com/problems/coin-change-2/}{Coin Change 2}}
+    \end{center}
+\end{frame}
+
+% Problem 5: Longest Increasing Subsequence
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 5: \href{https://leetcode.com/problems/longest-increasing-subsequence/}{Longest Increasing Subsequence}}
+    \end{center}
+\end{frame}
+
+% Problem 6: Word Break
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 6: \href{https://leetcode.com/problems/word-break/}{Word Break}}
+    \end{center}
+\end{frame}

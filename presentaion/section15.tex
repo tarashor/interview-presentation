@@ -1,0 +1,50 @@
+% Section 15 Header
+\section{Section 15 — Top ‘K’ Elements (Heap / Priority Queue)}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Top 'K' Elements Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Find the $K$ largest, smallest, or most frequent elements in a large collection.
+    \item \textbf{Why it works:} Instead of sorting the entire array in $O(N \log N)$ time, we can maintain a Heap/Priority Queue of size $K$.
+    \item \textbf{Heaps selection rule:}
+      \begin{itemize}
+        \item To find the **$K$ largest** elements: Use a **Min-Heap**. When size exceeds $K$, pop the smallest element. The heap will retain the $K$ largest values.
+        \item To find the **$K$ smallest** elements: Use a **Max-Heap**. When size exceeds $K$, pop the largest.
+      \end{itemize}
+    \item \textbf{Complexity:} $O(N \log K)$ time and $O(K)$ extra space.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Top K Frequent Elements
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/top-k-frequent-elements/}{Top K Frequent Elements}}
+    \end{center}
+\end{frame}
+
+% Problem 2: K Closest Points to Origin
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/k-closest-points-to-origin/}{K Closest Points to Origin}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Task Scheduler
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/task-scheduler/}{Task Scheduler}}
+    \end{center}
+\end{frame}
+
+% Problem 4: Reorganize String
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 4: \href{https://leetcode.com/problems/reorganize-string/}{Reorganize String}}
+    \end{center}
+\end{frame}

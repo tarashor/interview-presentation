@@ -1,0 +1,48 @@
+% Section 18 Header
+\section{Section 18 — Greedy Algorithms}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What are Greedy Algorithms?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} An algorithmic paradigm that builds up a solution piece by piece, always choosing the next piece that offers the most obvious and immediate local benefit ("greedy" choice).
+    \item \textbf{Why it works:} For certain problems, making locally optimal decisions leads to a globally optimal solution.
+    \item \textbf{Tradeoffs:}
+      \begin{itemize}
+        \item Highly efficient (usually $O(N)$ or $O(N \log N)$).
+        \item Difficult to mathematically prove correctness.
+        \item If greedy fails, you must fall back to Dynamic Programming (which checks all combinations).
+      \end{itemize}
+    \item \textbf{Common Triggers:}
+      \begin{itemize}
+        \item Scheduling, interval selection, minimizations.
+        \item Gas stations, container loading, coin distributions (canonical cases).
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Gas Station
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 1: \href{https://leetcode.com/problems/gas-station/}{Gas Station}}
+    \end{center}
+\end{frame}
+
+% Problem 2: Candy
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 2: \href{https://leetcode.com/problems/candy/}{Candy}}
+    \end{center}
+\end{frame}
+
+% Problem 3: Queue Reconstruction by Height
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Problem 3: \href{https://leetcode.com/problems/queue-reconstruction-by-height/}{Queue Reconstruction by Height}}
+    \end{center}
+\end{frame}
