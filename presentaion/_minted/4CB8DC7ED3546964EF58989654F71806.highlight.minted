@@ -1,0 +1,16 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{fun}\PYG{+w}{ }\PYG{n+nf}{twoSum}\PYG{p}{(}\PYG{n}{numbers}\PYG{p}{:}\PYG{+w}{ }\PYG{n}{IntArray}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{target}\PYG{p}{:}\PYG{+w}{ }\PYG{k+kt}{Int}\PYG{p}{):}\PYG{+w}{ }\PYG{n}{IntArray}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nv}{left}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m}{0}
+\PYG{+w}{    }\PYG{k+kd}{var}\PYG{+w}{ }\PYG{n+nv}{right}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{numbers}\PYG{p}{.}\PYG{n+na}{size}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{l+m}{1}
+
+\PYG{+w}{    }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{left}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{right}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kd}{val}\PYG{+w}{ }\PYG{n+nv}{sum}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{numbers}\PYG{o}{[}\PYG{n}{left}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{numbers}\PYG{o}{[}\PYG{n}{right}\PYG{o}{]}
+\PYG{+w}{        }\PYG{k}{when}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{sum}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{n}{target}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{intArrayOf}\PYG{p}{(}\PYG{n}{left}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{right}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m}{1}\PYG{p}{)}
+\PYG{+w}{            }\PYG{n}{sum}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{target}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{left}\PYG{o}{++}
+\PYG{+w}{            }\PYG{k}{else}\PYG{+w}{ }\PYG{o}{\PYGZhy{}\PYGZgt{}}\PYG{+w}{ }\PYG{n}{right}\PYG{o}{\PYGZhy{}\PYGZhy{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{intArrayOf}\PYG{p}{()}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

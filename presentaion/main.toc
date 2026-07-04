@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Section 0 — Welcome \& Course Orientation}{2}{0}{1}
+\beamer@sectionintoc {2}{Section 1 — Two Pointers: The Simplest Powerful Pattern}{18}{0}{2}

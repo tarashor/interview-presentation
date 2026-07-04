@@ -1,0 +1,46 @@
+\frametitle{Problem 2: Container With Most Water}
+\textbf{Goal:} Find two lines that together with the x-axis forms a container, such that the container contains the most water.
+
+    \begin{columns}[T]
+        \begin{column}{0.45\textwidth}
+            \begin{block}{The Algorithm}
+            \small
+            \begin{enumerate}
+                \item $i = 0, j = n-1$.
+                \item $Area = \min(h[i], h[j]) \times (j - i)$.
+                \item Update $maxArea$ if current is larger.
+                \item \textbf{Crucial:} Move the pointer pointing to the \textbf{shorter} line.
+            \end{enumerate}
+            \end{block}
+
+            \begin{block}{Complexity}
+            \small
+            \begin{itemize}
+                \item \textbf{Time:} $O(N)$
+                \item \textbf{Space:} $O(1)$
+            \end{itemize}
+            \end{block}
+        \end{column}
+
+        \begin{column}{0.52\textwidth}
+            \begin{exampleblock}{Kotlin Implementation}
+\begin{lstlisting}[language=Kotlin, basicstyle=\tiny\ttfamily, keywordstyle=\color{blue}]
+fun maxArea(height: IntArray): Int {
+    var max = 0
+    var i = 0
+    var j = height.size - 1
+
+    while (i < j) {
+        val h = minOf(height[i], height[j])
+        val w = j - i
+        max = maxOf(max, h * w)
+
+        if (height[i] < height[j]) i++
+        else j--
+    }
+    return max
+}
+\end{lstlisting}
+            \end{exampleblock}
+        \end{column}
+    \end{columns}

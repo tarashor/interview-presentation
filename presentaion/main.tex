@@ -14,6 +14,16 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 
+% Define Kotlin for listings package
+\lstdefinelanguage{Kotlin}{
+  comment=[l]{//},
+  comment=[s]{/*}{*/},
+  morekeywords={package,as,typealias,class,interface,this,super,val,var,fun,for,is,in,throw,try,catch,finally,true,false,null,object,return,when,while,break,continue,do,else,if,import,as,IntArray,intArrayOf,maxOf},
+  sensitive=true,
+  morestring=[b]",
+  morestring=[b]'
+}
+
 % Code Style Setup
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
@@ -45,8 +55,8 @@
 \end{frame}
 
 % --- TOGGLE THESE TO TEST INDIVIDUAL SECTIONS ---
-% \input{section0}
-% \input{section1} % Uncomment this and comment the one above to swap
+\input{section0}
+\input{section1} % Uncomment this and comment the one above to swap
 \input{section11}
 
 \end{document}
