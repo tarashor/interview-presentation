@@ -1,22 +1,22 @@
 \beamer@sectionintoc {1}{Course Introduction}{2}{0}{1}
 \beamer@sectionintoc {2}{Fundamentals \& Big O}{17}{0}{2}
-\beamer@sectionintoc {3}{Section 3 — Two Pointers Pattern}{23}{0}{3}
-\beamer@sectionintoc {4}{Section 4 — Sliding Window}{29}{0}{4}
-\beamer@sectionintoc {5}{Section 5 — Monotonic Stack}{36}{0}{5}
-\beamer@sectionintoc {6}{Section 6 — Prefix Sum \& Cumulative Patterns}{43}{0}{6}
-\beamer@sectionintoc {7}{Section 7 — Cyclic Sort}{48}{0}{7}
-\beamer@sectionintoc {8}{Section 8 — Merge Intervals}{54}{0}{8}
-\beamer@sectionintoc {9}{Section 9 — Modified Binary Search}{60}{0}{9}
-\beamer@sectionintoc {10}{Section 10 — Fast \& Slow Pointers}{67}{0}{10}
-\beamer@sectionintoc {11}{Section 11 — Tree Depth First Search (DFS)}{73}{0}{11}
-\beamer@sectionintoc {12}{Section 12 — Tree Breadth First Search (BFS)}{81}{0}{12}
-\beamer@sectionintoc {13}{Section 13 — Matrix Traversal (The "Islands" Pattern)}{88}{0}{13}
-\beamer@sectionintoc {14}{Section 14 — Union-Find (Disjoint Set)}{95}{0}{14}
-\beamer@sectionintoc {15}{Section 15 — Top ‘K’ Elements (Heap / Priority Queue)}{101}{0}{15}
-\beamer@sectionintoc {16}{Section 16 — Dynamic Programming}{107}{0}{16}
-\beamer@sectionintoc {17}{Section 17 — Backtracking \& DFS}{116}{0}{17}
-\beamer@sectionintoc {18}{Section 18 — Greedy Algorithms}{123}{0}{18}
-\beamer@sectionintoc {19}{Section 19 — Data Streams \& Online Algorithms}{128}{0}{19}
-\beamer@sectionintoc {20}{Section 20 — Advanced Patterns}{134}{0}{20}
-\beamer@sectionintoc {21}{Section 21 — Miscellaneous Techniques}{140}{0}{21}
+\beamer@sectionintoc {3}{Pattern 1: Two Pointers Pattern}{23}{0}{3}
+\beamer@sectionintoc {4}{Pattern 2: Sliding Window}{29}{0}{4}
+\beamer@sectionintoc {5}{Pattern 3: Monotonic Stack}{36}{0}{5}
+\beamer@sectionintoc {6}{Pattern 4: Prefix Sum \& Cumulative Patterns}{43}{0}{6}
+\beamer@sectionintoc {7}{Pattern 5: Cyclic Sort}{48}{0}{7}
+\beamer@sectionintoc {8}{Pattern 6: Merge Intervals}{54}{0}{8}
+\beamer@sectionintoc {9}{Pattern 7: Modified Binary Search}{60}{0}{9}
+\beamer@sectionintoc {10}{Pattern 8: Fast \& Slow Pointers}{67}{0}{10}
+\beamer@sectionintoc {11}{Pattern 9: Tree Depth First Search (DFS)}{73}{0}{11}
+\beamer@sectionintoc {12}{Pattern 10: Tree Breadth First Search (BFS)}{81}{0}{12}
+\beamer@sectionintoc {13}{Pattern 11: Matrix Traversal (The "Islands" Pattern)}{88}{0}{13}
+\beamer@sectionintoc {14}{Pattern 12: Union-Find (Disjoint Set)}{95}{0}{14}
+\beamer@sectionintoc {15}{Pattern 13: Top ‘K’ Elements (Heap / Priority Queue)}{101}{0}{15}
+\beamer@sectionintoc {16}{Pattern 14: Dynamic Programming}{107}{0}{16}
+\beamer@sectionintoc {17}{Pattern 15: Backtracking \& DFS}{116}{0}{17}
+\beamer@sectionintoc {18}{Pattern 16: Greedy Algorithms}{123}{0}{18}
+\beamer@sectionintoc {19}{Pattern 17: Data Streams \& Online Algorithms}{128}{0}{19}
+\beamer@sectionintoc {20}{Pattern 18: Advanced Patterns}{134}{0}{20}
+\beamer@sectionintoc {21}{Pattern 19: Miscellaneous Techniques}{140}{0}{21}
 \beamer@sectionintoc {22}{Section 22 — Summary \& The Modern Interview Landscape}{146}{0}{22}

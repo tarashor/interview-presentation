@@ -309,11 +309,11 @@ INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/am
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT ./luatex.eVk23j/1.png
-INPUT ./luatex.eVk23j/2.png
-INPUT ./luatex.eVk23j/3.png
+INPUT ./luatex.k2BvhA/1.png
+INPUT ./luatex.k2BvhA/2.png
+INPUT ./luatex.k2BvhA/3.png
 INPUT ./chart.tex
-INPUT ./luatex.eVk23j/4.png
+INPUT ./luatex.k2BvhA/4.png
 INPUT ./section2.tex
 INPUT ../bigO.png
 INPUT ../bigO.png
