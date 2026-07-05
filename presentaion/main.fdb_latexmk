@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1783198627.48148 "main.tex" "main.pdf" "main" 1783198632.80582 0
+["lualatex"] 1783246891.44992 "main.tex" "main.pdf" "main" 1783246896.69921 0
   "/System/Library/Fonts/Apple Color Emoji.ttc" 1782354543 192123488 661b67ed7d179f11885cfc7758e95a2d ""
   "/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1772380719 5541360 f183aac233c4cd1e5ef882fcbe8e7096 ""
   "/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf" 1772380719 64684 15a2082c8e31f411875a86ea2d29a0ee ""
@@ -310,12 +310,12 @@
   "/opt/homebrew/Cellar/texlive/20260301/share/texmf-var/luatex-cache/generic/fonts/otl/lmsans9-regular.luc" 1783191756.98408 128325 2b7baf2e484ecbebd8b089256878e30a ""
   "/opt/homebrew/Cellar/texlive/20260301/share/texmf-var/web2c/luahbtex/lualatex.fmt" 1772380719 5653610 62c3d1b7c555682d7190963efa8b53f5 ""
   "chart.tex" 1783192415.18244 28 c26ec0a6e864c3453ea3510e75f94da8 ""
-  "main.aux" 1783198632.39037 31425 822f3bb10bbf970ec7b7e368b23dcfe9 "lualatex"
-  "main.nav" 1783198632.39502 19170 ad9d5e848d88da283a69812f9d8581ee "lualatex"
-  "main.out" 1783198632.39462 5437 ff4ecbc19820a8707ba487b897473241 "lualatex"
+  "main.aux" 1783246896.24603 31348 ec274b8a8f3677d87bc392ba0938053b "lualatex"
+  "main.nav" 1783246896.25039 19150 5bfbb842b088f3403eed38d0a7f194c1 "lualatex"
+  "main.out" 1783246896.25002 5437 ff4ecbc19820a8707ba487b897473241 "lualatex"
   "main.tex" 1783198493.34299 1698 12dfac5ecc27c6282e92e2f95316e68a ""
-  "main.vrb" 1783198630.44741 1125 c08c440ba5826712ebaa489fc7818880 "lualatex"
-  "section1.tex" 1783198392.3249 3596 8780ffd1af17b1ea2b000e0352a765a1 ""
+  "main.vrb" 1783246894.30058 1125 c08c440ba5826712ebaa489fc7818880 "lualatex"
+  "section1.tex" 1783246868.05112 4527 2b07f356e2b9c314d7471da7d7b184e7 ""
   "section10.tex" 1783198436.84739 2296 6dc0d9d8442e6c58c4d7c4b8a4e2bd99 ""
   "section11.tex" 1783198441.19683 2599 a7013a77b6dd766af369a51aad5f3324 ""
   "section12.tex" 1783198444.81814 2482 b14f286d46e7ca851fe9d5865895022e ""

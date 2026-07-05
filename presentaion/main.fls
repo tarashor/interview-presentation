@@ -309,14 +309,11 @@ INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/am
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT ./luatex.njbUri/1.png
-INPUT ./luatex.njbUri/2.png
-INPUT ./luatex.njbUri/3.png
-INPUT ./luatex.njbUri/4.png
-INPUT ./luatex.njbUri/5.png
-INPUT ./luatex.njbUri/6.png
+INPUT ./luatex.YBGACd/1.png
+INPUT ./luatex.YBGACd/2.png
+INPUT ./luatex.YBGACd/3.png
 INPUT ./chart.tex
-INPUT ./luatex.njbUri/7.png
+INPUT ./luatex.YBGACd/4.png
 INPUT ./section2.tex
 INPUT ./section3.tex
 OUTPUT main.vrb
@@ -331,7 +328,7 @@ INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/am
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-var/luatex-cache/generic/fonts/otl/lmsans9-oblique.luc
 OUTPUT main.vrb
 INPUT ./main.vrb
-INPUT ./luatex.njbUri/8.png
+INPUT ./luatex.YBGACd/5.png
 INPUT ./section4.tex
 OUTPUT main.vrb
 INPUT ./main.vrb
