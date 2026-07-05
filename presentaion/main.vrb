@@ -2,19 +2,17 @@
 \tiny
   \centering
   \begin{table}[]
-    \begin{tabular}{lcll}
+    \begin{tabular}{lll}
         \toprule
-        \textbf{Idiom / Construct} & \textbf{Count} & \textbf{Primary Use Case} & \textbf{Codebase Example} \\ \midrule
-        \texttt{intArrayOf} / \texttt{arrayOf} & 355 & Matrix/test declarations & \texttt{intArrayOf(2, 7, 11, 15)} \\
-        \texttt{until} operator & 87 & Forward loop ($0$ to $size-1$) & \texttt{for (i in 0 until nums.size)} \\
-        Safe Call (\texttt{?.}) & 78 & Null-safe node traversal & \texttt{cur1 = cur1?.next} \\
-        \texttt{kotlin.math} (min/max) & 68 & Range clamping & \texttt{kotlin.math.min(price, minPrice)} \\
-        \texttt{mutableListOf} / \texttt{listOf} & 77 & Building outputs/collections & \texttt{val res = mutableListOf<List<Int>>()} \\
-        \texttt{apply} scope function & 40 & Building tree/list test inputs & \texttt{ListNode(3).apply \{ next = ListNode(1) \}} \\
-        \texttt{getOrDefault} & 24 & Map access with fallback & \texttt{adj.getOrDefault(v, hashMapOf())} \\
-        \texttt{ArrayDeque} & 20 & BFS queue / Stack & \texttt{val deque = ArrayDeque<IntArray>()} \\
-        \texttt{return if} (Expression) & 19 & Conditional returns & \texttt{return if (val1 >= 0) val1 else val2} \\
-        Elvis Operator (\texttt{?:}) & 14 & Null-safe fallback values & \texttt{(l1?.val ?: 0)} \\
+        \textbf{Idiom / Construct} & \textbf{Primary Use Case} & \textbf{Codebase Example} \\ \midrule
+        \texttt{intArrayOf} / \texttt{arrayOf} & Matrix/test declarations & \texttt{intArrayOf(2, 7, 11, 15)} \\
+        \texttt{until} operator & Forward loop ($0$ to $size-1$) & \texttt{for (i in 0 until nums.size)} \\
+        Safe Call (\texttt{?.}) & Null-safe node traversal & \texttt{cur1 = cur1?.next} \\
+        \texttt{kotlin.math} (min/max) & Range clamping & \texttt{kotlin.math.min(price, minPrice)} \\
+        \texttt{mutableListOf} / \texttt{listOf} & Building outputs/collections & \texttt{val res = mutableListOf<List<Int>>()} \\
+        \texttt{getOrDefault} & Map access with fallback & \texttt{adj.getOrDefault(v, hashMapOf())} \\
+        \texttt{ArrayDeque} & BFS queue / Stack & \texttt{val deque = ArrayDeque<IntArray>()} \\
+        \texttt{return if} (Expression) & Conditional returns & \texttt{return if (val1 >= 0) val1 else val2} \\
         \bottomrule
     \end{tabular}
   \end{table}
