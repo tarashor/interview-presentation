@@ -14,7 +14,6 @@
 ### 🧠 Section 3: Two Pointers Pattern (Streamlined)
 * **Concept:** Optimize space and time by using two moving pointers.
 * **Key Problems:**
-  * [Two Sum](https://leetcode.com/problems/two-sum/) - [Solution](https://github.com/tarashor/interview/blob/main/src/leetcode/twopointers/TwoSum.kt)
   * [3Sum](https://leetcode.com/problems/3sum/) - [Solution](https://github.com/tarashor/interview/blob/main/src/leetcode/twopointers/ThreeSum.kt)
   * [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) - [Solution](https://github.com/tarashor/interview/blob/main/src/leetcode/twopointers/MostWater.java)
   * [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) - [Solution](https://github.com/tarashor/interview/blob/main/src/leetcode/twopointers/RemoveDuplicates.java)
