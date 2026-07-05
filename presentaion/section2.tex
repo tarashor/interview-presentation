@@ -1,5 +1,5 @@
 % Section 2 Header
-\section{Section 2 — Fundamentals \& Big O}
+\section{Fundamentals \& Big O}
 
 \begin{frame}[c]{\empty}
     \begin{center}
@@ -23,18 +23,49 @@
 
 % Slide 2: Time & Space Complexity
 \begin{frame}{Big O Notation Demystified}
-  How does the runtime or space requirement grow as input size $N$ increases?
-  \begin{itemize}
-    \item \textbf{Time Complexity:} Count the number of dominant operations.
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      How does the runtime or space requirement grow as input size $N$ increases?
       \begin{itemize}
-        \item $O(1)$ - Constant time (direct access).
-        \item $O(\log N)$ - Logarithmic (halving the search space).
-        \item $O(N)$ - Linear (single pass).
-        \item $O(N \log N)$ - Linearithmic (sorting).
-        \item $O(N^2)$ - Quadratic (nested loops).
+        \item \textbf{Time Complexity:} Count dominant operations.
+          \begin{itemize}
+            \scriptsize
+            \item $O(1)$ - Constant time.
+            \item $O(\log N)$ - Logarithmic (halving search space).
+            \item $O(N)$ - Linear (single pass).
+            \item $O(N \log N)$ - Linearithmic (sorting).
+            \item $O(N^2)$ - Quadratic (nested loops).
+          \end{itemize}
+        \item \textbf{Space Complexity:} Measure auxiliary memory (call stack, maps, arrays).
       \end{itemize}
-    \item \textbf{Space Complexity:} Measure auxiliary memory used (call stack, maps, arrays) excluding input size itself.
-  \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{../bigO.png} \\
+      \vspace{0.2cm}
+      \tiny \href{https://www.bigocheatsheet.com/}{bigocheatsheet.com}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 2b: Complexity at N = 1,000,000
+\begin{frame}{Growth Rates in Action ($N = 1,000,000$)}
+  What do these complexities mean in practice for 1 million input elements?
+  \vspace{0.3cm}
+  \begin{table}[]
+    \small
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Complexity} & \textbf{Operations ($N = 10^6$)} & \textbf{Approx. Time (1GHz CPU)} \\ \midrule
+        $O(1)$ & $1$ & $\approx 1$ ns (Instant) \\
+        $O(\log N)$ & $\approx 20$ & $\approx 20$ ns (Instant) \\
+        $O(N)$ & $1,000,000$ & $\approx 1$ ms (Instant) \\
+        $O(N \log N)$ & $\approx 2 \times 10^7$ & $\approx 20$ ms (Instant) \\
+        $O(N^2)$ & $10^{12}$ & $\approx 16.7$ minutes (\textbf{Timeout}) \\
+        $O(2^N)$ & $2^{1,000,000}$ & $\gg$ Age of the Universe (\textbf{Impossible}) \\
+        \bottomrule
+    \end{tabular}
+  \end{table}
 \end{frame}
 
 % Slide 3: Data Structures Crash Course
