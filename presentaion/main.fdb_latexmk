@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1783250345.11563 "main.tex" "main.pdf" "main" 1783250349.2042 0
+["lualatex"] 1783250425.61133 "main.tex" "main.pdf" "main" 1783250429.77915 0
   "../bigO.png" 1783245678.57066 123471 19fabde5113034ff51f6481d72b67e75 ""
   "/System/Library/Fonts/Apple Color Emoji.ttc" 1782354543 192123488 661b67ed7d179f11885cfc7758e95a2d ""
   "/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1772380719 5541360 f183aac233c4cd1e5ef882fcbe8e7096 ""
@@ -298,11 +298,11 @@
   "/opt/homebrew/Cellar/texlive/20260301/share/texmf-var/luatex-cache/generic/fonts/otl/lmsans8-regular.luc" 1783191756.60198 127616 c812465fb30474119e0b74369d0e0733 ""
   "/opt/homebrew/Cellar/texlive/20260301/share/texmf-var/web2c/luahbtex/lualatex.fmt" 1772380719 5653610 62c3d1b7c555682d7190963efa8b53f5 ""
   "chart.tex" 1783192415.18244 28 c26ec0a6e864c3453ea3510e75f94da8 ""
-  "main.aux" 1783250348.89394 29783 a26cfc6a1615c5593beddf2a774accc4 "lualatex"
-  "main.nav" 1783250348.8979 18265 c9705c56bc5e4a074efb8f61d7580567 "lualatex"
-  "main.out" 1783250348.89757 5293 c82cf87e65d17760c0227a6f851b0e8f "lualatex"
+  "main.aux" 1783250429.43378 29783 a26cfc6a1615c5593beddf2a774accc4 "lualatex"
+  "main.nav" 1783250429.43819 18265 c9705c56bc5e4a074efb8f61d7580567 "lualatex"
+  "main.out" 1783250429.43776 5293 c82cf87e65d17760c0227a6f851b0e8f "lualatex"
   "main.tex" 1783198493.34299 1698 12dfac5ecc27c6282e92e2f95316e68a ""
-  "section1.tex" 1783247744.96815 4584 7981c26e634c2a5581db286724b9f93e ""
+  "section1.tex" 1783250421.75849 4575 d0c2d5fed8a6d7b6f958c46e41fb6a09 ""
   "section10.tex" 1783198436.84739 2296 6dc0d9d8442e6c58c4d7c4b8a4e2bd99 ""
   "section11.tex" 1783198441.19683 2599 a7013a77b6dd766af369a51aad5f3324 ""
   "section12.tex" 1783198444.81814 2482 b14f286d46e7ca851fe9d5865895022e ""
