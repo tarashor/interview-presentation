@@ -248,7 +248,6 @@ INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstpatch.sty
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/listings.cfg
-INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/listings/lstlang1.sty
 INPUT ./main.aux
 OUTPUT main.aux
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -309,11 +308,11 @@ INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/am
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
-INPUT ./luatex.k2BvhA/1.png
-INPUT ./luatex.k2BvhA/2.png
-INPUT ./luatex.k2BvhA/3.png
+INPUT ./luatex.nDPJZo/1.png
+INPUT ./luatex.nDPJZo/2.png
+INPUT ./luatex.nDPJZo/3.png
 INPUT ./chart.tex
-INPUT ./luatex.k2BvhA/4.png
+INPUT ./luatex.nDPJZo/4.png
 INPUT ./section2.tex
 INPUT ../bigO.png
 INPUT ../bigO.png
@@ -323,6 +322,9 @@ INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/lm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-var/luatex-cache/generic/fonts/otl/lmsans12-oblique.luc
+OUTPUT main.vrb
+INPUT ./main.vrb
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc
 INPUT ./section3.tex
 INPUT ./section4.tex
 INPUT ./section5.tex
@@ -354,4 +356,5 @@ INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmss12.pfb
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmss8.pfb
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/lm/lmsy6.pfb
 INPUT /opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb

@@ -84,16 +84,25 @@
   \end{table}
 \end{frame}
 
-% Slide 4: Idiomatic Code
-\begin{frame}{Writing Idiomatic Code under Pressure}
-  Write production-ready, readable code rather than terse competitive code.
-  \begin{itemize}
-    \item \textbf{Kotlin Idioms:}
-      \begin{itemize}
-        \item Use `maxOf(a, b)` and `minOf(a, b)` instead of custom ifs.
-        \item Prefer `when` expressions for clean decision branches.
-        \item Avoid force-unwrapping nullables (`!!`) unless absolutely safe.
-      \end{itemize}
-    \item \textbf{Self-Documentation:} Use descriptive variable names (`left`, `right`, `charCount`) instead of obscure ones (`l`, `r`, `c`).
-  \end{itemize}
+% Slide 4: Top Kotlin Idioms at a Glance
+\begin{frame}[fragile]{Top Kotlin Idioms at a Glance}
+  \tiny
+  \centering
+  \begin{table}[]
+    \begin{tabular}{lcll}
+        \toprule
+        \textbf{Idiom / Construct} & \textbf{Count} & \textbf{Primary Use Case} & \textbf{Codebase Example} \\ \midrule
+        \texttt{intArrayOf} / \texttt{arrayOf} & 355 & Matrix/test declarations & \texttt{intArrayOf(2, 7, 11, 15)} \\
+        \texttt{until} operator & 87 & Forward loop ($0$ to $size-1$) & \texttt{for (i in 0 until nums.size)} \\
+        Safe Call (\texttt{?.}) & 78 & Null-safe node traversal & \texttt{cur1 = cur1?.next} \\
+        \texttt{kotlin.math} (min/max) & 68 & Range clamping & \texttt{kotlin.math.min(price, minPrice)} \\
+        \texttt{mutableListOf} / \texttt{listOf} & 77 & Building outputs/collections & \texttt{val res = mutableListOf<List<Int>>()} \\
+        \texttt{apply} scope function & 40 & Building tree/list test inputs & \texttt{ListNode(3).apply \{ next = ListNode(1) \}} \\
+        \texttt{getOrDefault} & 24 & Map access with fallback & \texttt{adj.getOrDefault(v, hashMapOf())} \\
+        \texttt{ArrayDeque} & 20 & BFS queue / Stack & \texttt{val deque = ArrayDeque<IntArray>()} \\
+        \texttt{return if} (Expression) & 19 & Conditional returns & \texttt{return if (val1 >= 0) val1 else val2} \\
+        Elvis Operator (\texttt{?:}) & 14 & Null-safe fallback values & \texttt{(l1?.val ?: 0)} \\
+        \bottomrule
+    \end{tabular}
+  \end{table}
 \end{frame}
