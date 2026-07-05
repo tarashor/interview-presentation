@@ -12,12 +12,6 @@
   \begin{itemize}
     \item \textbf{The Core Idea:} When an array contains numbers in a range from $1$ to $n$ (or $0$ to $n$), we can sort it in $O(n)$ time and $O(1)$ auxiliary space.
     \item \textbf{How it works:} Iterate through the array. If the current number `nums[i]` is not at its correct index (i.e. `nums[i] != i + 1`), swap it with the number at its correct index `nums[nums[i] - 1]`. Repeat this until the correct number is at index `i`, then move to the next index.
-    \item \textbf{Common Triggers:}
-      \begin{itemize}
-        \item Problems dealing with numbers in a continuous range.
-        \item Finding duplicate or missing numbers in an array.
-        \item Finding the first/smallest missing positive number.
-      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -49,4 +43,13 @@
     \begin{center}
         \Large \textbf{Problem 3: \href{https://leetcode.com/problems/find-all-duplicates-in-an-array/}{Find All Duplicates in an Array}}
     \end{center}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Problems dealing with numbers in a continuous range.
+        \item Finding duplicate or missing numbers in an array.
+        \item Finding the first/smallest missing positive number.
+  \end{itemize}
 \end{frame}

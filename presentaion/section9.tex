@@ -12,12 +12,6 @@
   \begin{itemize}
     \item \textbf{The Core Idea:} An extension of standard binary search that applies to non-standard sorted structures or search spaces.
     \item \textbf{Why it works:} By dividing the search space in half in $O(1)$ time, we achieve a logarithmic $O(\log N)$ runtime.
-    \item \textbf{Common Triggers:}
-      \begin{itemize}
-        \item Searching in a rotated sorted array.
-        \item Finding boundaries, peaks, or transition points.
-        \item \textbf{Binary Search on Answers:} When checking if a candidate answer is valid takes $O(N)$ time, and the answer is monotonic, we search the answer range.
-      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -60,4 +54,13 @@
     \begin{center}
         \Large \textbf{Problem 4: \href{https://leetcode.com/problems/powx-n/}{Pow(x, n)}}
     \end{center}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Searching in a rotated sorted array.
+        \item Finding boundaries, peaks, or transition points.
+        \item \textbf{Binary Search on Answers:} When checking if a candidate answer is valid takes $O(N)$ time, and the answer is monotonic, we search the answer range.
+  \end{itemize}
 \end{frame}

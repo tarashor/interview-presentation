@@ -12,13 +12,6 @@
   \begin{itemize}
     \item \textbf{The Core Idea:} Use two pointers traversing a linear data structure (linked list/array) at different speeds.
     \item \textbf{Why it works:} If there is a cycle, the fast pointer (moving 2 steps at a time) will eventually meet the slow pointer (moving 1 step at a time) in $O(N)$ time and $O(1)$ space.
-    \item \textbf{Common Triggers:}
-      \begin{itemize}
-        \item Cycle detection in a linked list.
-        \item Finding the starting node of a cycle.
-        \item Finding the middle node of a list (when the fast pointer reaches the end, the slow pointer is in the middle).
-        \item Identifying duplicates in structures where values can be treated as indices.
-      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -54,4 +47,14 @@
     \begin{center}
         \Large \textbf{Problem 3: \href{https://leetcode.com/problems/find-the-duplicate-number/}{Find the Duplicate Number}}
     \end{center}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Cycle detection in a linked list.
+        \item Finding the starting node of a cycle.
+        \item Finding the middle node of a list (when the fast pointer reaches the end, the slow pointer is in the middle).
+        \item Identifying duplicates in structures where values can be treated as indices.
+  \end{itemize}
 \end{frame}

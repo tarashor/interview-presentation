@@ -12,12 +12,6 @@
   \begin{itemize}
     \item \textbf{The Core Idea:} A stack that maintains elements in a strictly increasing or decreasing order.
     \item \textbf{How it works:} When a new element is processed, we pop all elements from the stack that violate the monotonic property before pushing the new element.
-    \item \textbf{Common Triggers:}
-      \begin{itemize}
-        \item Finding the "next greater" or "previous smaller" element in an array.
-        \item Computing areas bounded by heights (e.g. histograms, trapping water).
-        \item Resolving queries in $O(N)$ total time where each index is pushed/popped at most once.
-      \end{itemize}
   \end{itemize}
 \end{frame}
 
@@ -54,4 +48,13 @@
     \begin{center}
         \Large \textbf{Problem 4: \href{https://leetcode.com/problems/largest-rectangle-in-histogram/}{Largest Rectangle in Histogram}}
     \end{center}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Finding the "next greater" or "previous smaller" element in an array.
+        \item Computing areas bounded by heights (e.g. histograms, trapping water).
+        \item Resolving queries in $O(N)$ total time where each index is pushed/popped at most once.
+  \end{itemize}
 \end{frame}
