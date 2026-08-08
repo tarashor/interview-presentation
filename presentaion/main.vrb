@@ -5,5 +5,5 @@
   \vspace{0.3cm}
   \textbf{Examples:}
   \begin{itemize}
-    \item \textbf{Input:} \texttt{['2','1','+','3','*']} $\rightarrow$ \textbf{Output:} \texttt{9}
+    \item \textbf{Input:} \texttt{['4','13','5','/','+']} $\rightarrow$ \textbf{Output:} \texttt{6}
   \end{itemize}
