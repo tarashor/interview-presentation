@@ -1,0 +1,103 @@
+% Section 16 Header
+\section{Pattern 14: Dynamic Programming}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is Dynamic Programming (DP)?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Solve complex problems by breaking them down into simpler, overlapping subproblems and caching their results to avoid redundant calculations.
+    \item \textbf{Key Properties:}
+      \begin{itemize}
+        \item \textbf{Overlapping Subproblems:} Solving the same subproblems repeatedly.
+        \item \textbf{Optimal Substructure:} The optimal solution of the problem can be constructed from optimal solutions of its subproblems.
+      \end{itemize}
+    \item \textbf{Approaches:}
+      \begin{itemize}
+        \item \textbf{Top-Down (Memoization):} Recursive, start from target, solve subproblems and save values in a cache.
+        \item \textbf{Bottom-Up (Tabulation):} Iterative, start from base cases, fill a table (array/matrix) up to target.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dynamic Programming Sub-patterns}
+  Most interview DP problems fall into standard subclasses:
+  \begin{itemize}
+    \item **Fibonacci Numbers:** `dp[i] = dp[i-1] + dp[i-2]` (Climbing Stairs).
+    \item **0/1 Knapsack:** Items can be chosen at most once. Decide to include or exclude an item: `dp[i][w] = max(exclude, include)`.
+    \item **Unbounded Knapsack / Coin Change:** Items can be chosen multiple times.
+    \item **Longest Common Subsequence (LCS) / Edit Distance:** String matching.
+    \item **Longest Increasing Subsequence (LIS):** Decisions based on previous elements.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Climbing Stairs
+\begin{frame}[fragile]{Problem: Distinct Ways to Climb Stairs}
+  \textbf{Scenario:}
+  You are climbing a staircase that takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{4} $\rightarrow$ \textbf{Output:} \texttt{5}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: 0/1 Knapsack (Concept)
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large \textbf{Concept: 0/1 Knapsack}
+    \end{center}
+\end{frame}
+
+% Problem 3: Coin Change
+\begin{frame}[fragile]{Problem: Minimum Coins for Change}
+  \textbf{Scenario:}
+  Given `denominations` of coins and a `targetAmount`, write a function to compute the fewest number of coins needed to make up that amount.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{denominations = [2,5,10], targetAmount = 15} $\rightarrow$ \textbf{Output:} \texttt{2}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: Coin Change 2
+\begin{frame}[fragile]{Problem: Combinations count for Change}
+  \textbf{Scenario:}
+  Given `denominations` of coins and a `targetAmount`, return the number of combinations that make up that amount.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{denominations = [2,3], targetAmount = 6} $\rightarrow$ \textbf{Output:} \texttt{2}
+  \end{itemize}
+\end{frame}
+
+% Problem 5: Longest Increasing Subsequence
+\begin{frame}[fragile]{Problem: Longest Strictly Increasing Subsequence}
+  \textbf{Scenario:}
+  Given an integer array, return the length of the longest strictly increasing subsequence.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[3, 10, 2, 1, 20]} $\rightarrow$ \textbf{Output:} \texttt{3}
+  \end{itemize}
+\end{frame}
+
+% Problem 6: Word Break
+\begin{frame}[fragile]{Problem: String Segmentation using Dictionary}
+  \textbf{Scenario:}
+  Given a string `text` and a `dictionary` of words, return true if the string can be segmented into a space-separated sequence of dictionary words.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{text = 'courseplay', dictionary = ['course','play']} $\rightarrow$ \textbf{Output:} \texttt{true}
+  \end{itemize}
+\end{frame}

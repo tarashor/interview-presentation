@@ -1,0 +1,78 @@
+% Section 3 Header
+\section{Pattern 1: Two Pointers Pattern}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Concept explanation (migrated from section1)
+\begin{frame}{What is the Two Pointers Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Use two indices (pointers) to iterate through a data structure simultaneously.
+    \item \textbf{Why it works:} It reduces $O(n^2)$ nested loops to a single $O(n)$ pass.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Pattern Mechanics: Opposite Ends}
+  When searching for a target in a \textbf{Sorted} array:
+  \begin{enumerate}
+    \item \textbf{Left Pointer:} Starts at index $0$.
+    \item \textbf{Right Pointer:} Starts at index $n-1$.
+    \item \textbf{Decision:}
+      \begin{itemize}
+        \item If \textit{sum > target}: Move Right pointer left ($\leftarrow$) to decrease sum.
+        \item If \textit{sum < target}: Move Left pointer right ($\rightarrow$) to increase sum.
+      \end{itemize}
+  \end{enumerate}
+\end{frame}
+
+
+% Problem 1: 3Sum Link
+\begin{frame}[fragile]{Problem: Zero-Sum Triplets}
+  \textbf{Scenario:}
+  Given an integer array, find all unique triplets $[a, b, c]$ such that their sum equals exactly zero. The solution set must not contain duplicate triplets.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[-2, 0, 1, 1, 2, -1, -4]} $\rightarrow$ \textbf{Output:} \texttt{[[-2, 0, 2], [-2, 1, 1], [-1, 0, 1]]}
+    \item \textbf{Input:} \texttt{[1, 2, -2]} $\rightarrow$ \textbf{Output:} \texttt{[]}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Container With Most Water Link
+\begin{frame}[fragile]{Problem: Maximizing Container Area}
+  \textbf{Scenario:}
+  Given an array representing wall heights, find two walls that, together with the horizontal axis, form a container holding the maximum volume of water.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[2, 8, 6, 3, 5, 4, 7, 3, 5]} $\rightarrow$ \textbf{Output:} \texttt{35}
+    \newline \textit{Explanation:} The walls at indices 1 and 6 have heights 8 and 7, width is 5. Area = min(8,7) * 5 = 35.
+  \end{itemize}
+\end{frame}
+
+
+% Problem 3: Remove Duplicates from Sorted Array Link
+\begin{frame}[fragile]{Problem: Unique Elements In-Place}
+  \textbf{Scenario:}
+  Given a sorted array, remove duplicate elements in-place so that each unique element appears only once. Return the number of unique elements.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[2, 2, 3, 3, 4]} $\rightarrow$ \textbf{Output:} \texttt{3 (modified array: [2, 3, 4, X, X])}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item The array is \textbf{Sorted}.
+        \item You need to find a pair, a triplet, or a subarray.
+        \item You need to "filter" or "rearrange" an array in-place.
+  \end{itemize}
+\end{frame}

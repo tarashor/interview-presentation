@@ -1,0 +1,86 @@
+% Section 9 Header
+\section{Pattern 7: Modified Binary Search}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is Modified Binary Search?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} An extension of standard binary search that applies to non-standard sorted structures or search spaces.
+    \item \textbf{Why it works:} By dividing the search space in half in $O(1)$ time, we achieve a logarithmic $O(\log N)$ runtime.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Binary Search on Answer Space}
+  Instead of searching indices in an array, we search value ranges (from `minPossibleAnswer` to `maxPossibleAnswer`):
+  \begin{itemize}
+    \item Find the midpoint `mid` of the current range.
+    \item Run a validation function `isValid(mid)` to check if `mid` is a possible solution (usually in $O(N)$ time).
+    \item Based on the result:
+      \begin{itemize}
+        \item If valid: Try to find a better solution in the lower half (if minimizing).
+        \item If invalid: Discard the lower half and search the upper half.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Search in Rotated Sorted Array
+\begin{frame}[fragile]{Problem: Search in Shifted Sorted Array}
+  \textbf{Scenario:}
+  Search for a `target` value in a sorted `array` that has been rotated (shifted circular-wise) at an unknown pivot index. Return its index, or -1 if not found.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{array = [5,6,7,1,2,3,4], target = 2} $\rightarrow$ \textbf{Output:} \texttt{4}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Find Minimum in Rotated Sorted Array
+\begin{frame}[fragile]{Problem: Find Minimum in Shifted Sorted Array}
+  \textbf{Scenario:}
+  Given a sorted array that has been rotated (shifted circular-wise) at an unknown pivot index, find the minimum element in the array.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[4, 5, 6, 2, 3]} $\rightarrow$ \textbf{Output:} \texttt{2}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Capacity To Ship Packages Within D Days
+\begin{frame}[fragile]{Problem: Package Shipping Optimization}
+  \textbf{Scenario:}
+  A conveyor belt carries packages with weights `loads` that must be shipped in order within `targetDays` days. Find the minimum weight capacity of the ship that permits this.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{loads = [3,2,2,4,1,4], targetDays = 3} $\rightarrow$ \textbf{Output:} \texttt{6}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: Pow(x, n)
+\begin{frame}[fragile]{Problem: Fast Power Calculation}
+  \textbf{Scenario:}
+  Implement a function to calculate `base` raised to the power `power`, i.e., $\text{base}^{\text{power}}$, supporting negative integer powers.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{base = 3.00, power = 5} $\rightarrow$ \textbf{Output:} \texttt{243.00}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Searching in a rotated sorted array.
+        \item Finding boundaries, peaks, or transition points.
+        \item \textbf{Binary Search on Answers:} When checking if a candidate answer is valid takes $O(N)$ time, and the answer is monotonic, we search the answer range.
+  \end{itemize}
+\end{frame}

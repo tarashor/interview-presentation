@@ -1,0 +1,106 @@
+% Section 2 Header
+\section{Fundamentals \& Big O}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{The Absolute Essentials}
+  Before mastering coding patterns, you must master the fundamental building blocks.
+  \begin{itemize}
+    \item \textbf{Why?} Interviewers evaluate your ability to select the right tool for the job.
+    \item \textbf{Key Areas:}
+      \begin{itemize}
+        \item Analyzing efficiency (Big O Complexity).
+        \item Choosing the right data structures.
+        \item Writing idiomatic, clean code under pressure.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Slide 2: Time & Space Complexity
+\begin{frame}{Big O Notation Demystified}
+  \begin{columns}
+    \begin{column}{0.6\textwidth}
+      How does the runtime or space requirement grow as input size $N$ increases?
+      \begin{itemize}
+        \item \textbf{Time Complexity:} Count dominant operations.
+          \begin{itemize}
+            \scriptsize
+            \item $O(1)$ - Constant time.
+            \item $O(\log N)$ - Logarithmic (halving search space).
+            \item $O(N)$ - Linear (single pass).
+            \item $O(N \log N)$ - Linearithmic (sorting).
+            \item $O(N^2)$ - Quadratic (nested loops).
+          \end{itemize}
+        \item \textbf{Space Complexity:} Measure auxiliary memory (call stack, maps, arrays).
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.4\textwidth}
+      \centering
+      \includegraphics[width=\textwidth]{../bigO.png} \\
+      \vspace{0.2cm}
+      \tiny \href{https://www.bigocheatsheet.com/}{bigocheatsheet.com}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+% Slide 2b: Complexity at N = 1,000,000
+\begin{frame}{Growth Rates in Action ($N = 1,000,000$)}
+  What do these complexities mean in practice for 1 million input elements?
+  \vspace{0.3cm}
+  \begin{table}[]
+    \small
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Complexity} & \textbf{Operations ($N = 10^6$)} & \textbf{Approx. Time (1GHz CPU)} \\ \midrule
+        $O(1)$ & $1$ & $\approx 1$ ns (Instant) \\
+        $O(\log N)$ & $\approx 20$ & $\approx 20$ ns (Instant) \\
+        $O(N)$ & $1,000,000$ & $\approx 1$ ms (Instant) \\
+        $O(N \log N)$ & $\approx 2 \times 10^7$ & $\approx 20$ ms (Instant) \\
+        $O(N^2)$ & $10^{12}$ & $\approx 16.7$ minutes (\textbf{Timeout}) \\
+        $O(2^N)$ & $2^{1,000,000}$ & $\gg$ Age of the Universe (\textbf{Impossible}) \\
+        \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+% Slide 3: Data Structures Crash Course
+\begin{frame}{Data Structures Crash Course}
+  \begin{table}[]
+    \scriptsize
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Data Structure} & \textbf{Strengths} & \textbf{Common Use Case} \\ \midrule
+        \textbf{Array / List} & Fast index access ($O(1)$) & Ordered traversal, sorting \\
+        \textbf{HashMap / Map} & Key lookup ($O(1)$ average) & Frequency counting, cache \\
+        \textbf{HashSet / Set} & Duplicate removal, search ($O(1)$) & Visited trackers, unique items \\
+        \textbf{Queue / Deque} & FIFO ordering ($O(1)$ push/pop) & BFS, level order traversal \\
+        \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+
+% Slide 4: Top Kotlin Idioms at a Glance
+\begin{frame}[fragile]{Top Kotlin Idioms at a Glance}
+  \tiny
+  \centering
+  \begin{table}[]
+    \begin{tabular}{lll}
+        \toprule
+        \textbf{Idiom / Construct} & \textbf{Primary Use Case} & \textbf{Codebase Example} \\ \midrule
+        \texttt{intArrayOf} / \texttt{arrayOf} & Matrix/test declarations & \texttt{intArrayOf(2, 7, 11, 15)} \\
+        \texttt{until} operator & Forward loop ($0$ to $size-1$) & \texttt{for (i in 0 until nums.size)} \\
+        Safe Call (\texttt{?.}) & Null-safe node traversal & \texttt{cur1 = cur1?.next} \\
+        \texttt{kotlin.math} (min/max) & Range clamping & \texttt{kotlin.math.min(price, minPrice)} \\
+        \texttt{mutableListOf} / \texttt{listOf} & Building outputs/collections & \texttt{val res = mutableListOf<List<Int>>()} \\
+        \texttt{getOrDefault} & Map access with fallback & \texttt{adj.getOrDefault(v, hashMapOf())} \\
+        \texttt{ArrayDeque} & BFS queue / Stack & \texttt{val deque = ArrayDeque<IntArray>()} \\
+        \texttt{return if} (Expression) & Conditional returns & \texttt{return if (val1 >= 0) val1 else val2} \\
+        \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}

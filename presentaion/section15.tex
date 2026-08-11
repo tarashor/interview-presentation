@@ -1,0 +1,70 @@
+% Section 15 Header
+\section{Pattern 13: Top ‘K’ Elements (Heap / Priority Queue)}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Top 'K' Elements Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Find the $K$ largest, smallest, or most frequent elements in a large collection.
+    \item \textbf{Why it works:} Instead of sorting the entire array in $O(N \log N)$ time, we can maintain a Heap/Priority Queue of size $K$.
+    \item \textbf{Heaps selection rule:}
+      \begin{itemize}
+        \item To find the **$K$ largest** elements: Use a **Min-Heap**. When size exceeds $K$, pop the smallest element. The heap will retain the $K$ largest values.
+        \item To find the **$K$ smallest** elements: Use a **Max-Heap**. When size exceeds $K$, pop the largest.
+      \end{itemize}
+    \item \textbf{Complexity:} $O(N \log K)$ time and $O(K)$ extra space.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Top K Frequent Elements
+\begin{frame}[fragile]{Problem: K Most Frequent Elements}
+  \textbf{Scenario:}
+  Given an integer `array` and an integer `limit`, return the `limit` most frequent elements in the array. You may return the answer in any order.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{array = [4,4,4,4,5,5,6], limit = 1} $\rightarrow$ \textbf{Output:} \texttt{[4]}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: K Closest Points to Origin
+\begin{frame}[fragile]{Problem: K Nearest Coordinates to Origin}
+  \textbf{Scenario:}
+  Given an array of `coordinates` on the X-Y plane and an integer `limit`, return the `limit` closest coordinates to the origin (0, 0) using Euclidean distance.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{coordinates = [[3,3],[5,-1],[-2,4]], limit = 2} $\rightarrow$ \textbf{Output:} \texttt{[[3,3],[-2,4]]}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Task Scheduler
+\begin{frame}[fragile]{Problem: CPU Task Scheduler}
+  \textbf{Scenario:}
+  Given a list of CPU `jobs` and a `cooldown` period, find the minimum CPU intervals required to complete all tasks.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{jobs = ['A','A'], cooldown = 2} $\rightarrow$ \textbf{Output:} \texttt{4}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: Reorganize String
+\begin{frame}[fragile]{Problem: Rearrange No-Adjacent-Duplicate Characters}
+  \textbf{Scenario:}
+  Given a string, rearrange its characters so that any two adjacent characters are not the same. Return empty string if impossible.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{'vvvt'} $\rightarrow$ \textbf{Output:} \texttt{''}
+  \end{itemize}
+\end{frame}

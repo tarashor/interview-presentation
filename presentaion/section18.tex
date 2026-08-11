@@ -1,0 +1,66 @@
+% Section 18 Header
+\section{Pattern 16: Greedy Algorithms}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What are Greedy Algorithms?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} An algorithmic paradigm that builds up a solution piece by piece, always choosing the next piece that offers the most obvious and immediate local benefit ("greedy" choice).
+    \item \textbf{Why it works:} For certain problems, making locally optimal decisions leads to a globally optimal solution.
+    \item \textbf{Tradeoffs:}
+      \begin{itemize}
+        \item Highly efficient (usually $O(N)$ or $O(N \log N)$).
+        \item Difficult to mathematically prove correctness.
+        \item If greedy fails, you must fall back to Dynamic Programming (which checks all combinations).
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Gas Station
+\begin{frame}[fragile]{Problem: Circular Route Fuel Stations}
+  \textbf{Scenario:}
+  Given `fuel` and `cost` arrays for circular route fuel stations, find the starting station index from which you can travel around the circuit once without running out of gas.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{fuel = [2,3,4], cost = [3,4,3]} $\rightarrow$ \textbf{Output:} \texttt{-1}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Candy
+\begin{frame}[fragile]{Problem: Min Candy Distribution}
+  \textbf{Scenario:}
+  There are n children standing in a line. Each child has a rating. Distribute candies such that each child has at least 1, and children with higher ratings than neighbors get more.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[1,2,2]} $\rightarrow$ \textbf{Output:} \texttt{4}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Queue Reconstruction by Height
+\begin{frame}[fragile]{Problem: Line Reconstruction by Height Attributes}
+  \textbf{Scenario:}
+  Reconstruct a queue where each person is represented by [h, k] where h is their height and k is the number of people in front of them who are taller or equal.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[[5,0],[4,1],[6,0]]} $\rightarrow$ \textbf{Output:} \texttt{[[5,0],[4,1],[6,0]]}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Scheduling, interval selection, minimizations.
+        \item Gas stations, container loading, coin distributions (canonical cases).
+  \end{itemize}
+\end{frame}

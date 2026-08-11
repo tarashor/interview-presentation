@@ -1,0 +1,70 @@
+% Section 8 Header
+\section{Pattern 6: Merge Intervals}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Merge Intervals Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Process overlapping intervals by sorting them and merging adjacent ranges.
+    \item \textbf{Why it works:} Once sorted by start time, overlapping intervals will be adjacent. We can merge them in a single linear pass.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Merging Logic}
+  Given two sorted intervals $A$ and $B$, they overlap if:
+  $$B.\text{start} \le A.\text{end}$$
+  If they overlap, we merge them into a single interval $C$ where:
+  $$C.\text{start} = A.\text{start}$$
+  $$C.\text{end} = \max(A.\text{end}, B.\text{end})$$
+  Otherwise, they do not overlap, and we add $A$ to our output list and set $B$ as the new active interval.
+\end{frame}
+
+% Problem 1: Merge Intervals
+\begin{frame}[fragile]{Problem: Consolidating Overlapping Intervals}
+  \textbf{Scenario:}
+  Given an array of intervals [start, end], merge all overlapping intervals and return a list of non-overlapping intervals covering the same range.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[[2,4],[3,7],[8,11],[12,15]]} $\rightarrow$ \textbf{Output:} \texttt{[[2,7],[8,11],[12,15]]}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Insert Interval
+\begin{frame}[fragile]{Problem: Inserting into Non-Overlapping Intervals}
+  \textbf{Scenario:}
+  Given a set of non-overlapping `ranges` sorted by start time, insert a `newRange` and merge if it overlaps with existing intervals.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{ranges = [[2,5],[8,12]], newRange = [4,9]} $\rightarrow$ \textbf{Output:} \texttt{[[2,12]]}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Employee Free Time
+\begin{frame}[fragile]{Problem: Common Available Time Slots}
+  \textbf{Scenario:}
+  Given schedules of multiple users containing busy intervals, find the free time intervals common to all users.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[[[1,3],[6,7]],[[2,4]],[[2,5],[8,9]]]} $\rightarrow$ \textbf{Output:} \texttt{[[5,6],[7,8]]}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Finding overlapping ranges, free slots, or busy schedules.
+        \item Inserting new intervals into already sorted ranges.
+        \item Finding intersections of multiple lists of intervals.
+  \end{itemize}
+\end{frame}

@@ -1,0 +1,70 @@
+% Section 19 Header
+\section{Pattern 17: Data Streams \& Online Algorithms}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{Data Streams \& Online Algorithms}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Process data that arrives continuously over time, rather than having the entire dataset available in memory upfront.
+    \item \textbf{Constraint:} Algorithms must run in real-time with limited space ($O(1)$ or $O(K)$ where $K$ is the query window size) and time complexity per element.
+    \item \textbf{Key Techniques:}
+      \begin{itemize}
+        \item \textbf{Two Heaps:} Balancing a Max-Heap and Min-Heap to find median in $O(1)$ time.
+        \item \textbf{Reservoir Sampling:} Selecting a random sample from a stream of unknown size.
+        \item \textbf{Double Linked List + HashMap:} Designing fast cache policies (like LRU/LFU cache) with $O(1)$ insertion, lookup, and deletion.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Find Median from Data Stream
+\begin{frame}[fragile]{Problem: Running Median from Data Stream}
+  \textbf{Scenario:}
+  Design a data structure that supports adding numbers from a data stream and finding the median of the numbers added so far.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{addNum(5), addNum(15), findMedian(), addNum(3), findMedian()} $\rightarrow$ \textbf{Output:} \texttt{10.0, then 5.0}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Random Pick Index
+\begin{frame}[fragile]{Problem: Random Pick Index from Duplicates}
+  \textbf{Scenario:}
+  Given an integer array with duplicate elements, randomly pick an index of a given target number with equal probability.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{array = [5,7,7,8], pick(7)} $\rightarrow$ \textbf{Output:} \texttt{1 or 2}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Moving Average from Data Stream
+\begin{frame}[fragile]{Problem: Moving Average in Sliding Window}
+  \textbf{Scenario:}
+  Given a stream of integers and a window size, calculate the moving average of all integers in the sliding window.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{capacity = 2, next(4), next(8), next(2)} $\rightarrow$ \textbf{Output:} \texttt{4.0, 6.0, 5.0}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: LRU Cache
+\begin{frame}[fragile]{Problem: LRU Cache Design}
+  \textbf{Scenario:}
+  Design a data structure that follows the constraints of a Least Recently Used (LRU) cache with get and put operations in O(1) time.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{capacity = 1, put(5,10), get(5), put(6,12), get(5)} $\rightarrow$ \textbf{Output:} \texttt{get(5)->10, get(5)->-1}
+  \end{itemize}
+\end{frame}

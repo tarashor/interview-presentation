@@ -1,0 +1,67 @@
+% Section 21 Header
+\section{Pattern 19: Miscellaneous Techniques}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{Miscellaneous Interview Techniques}
+  Some interview questions don't fit into single patterns, but require a combination of general skills:
+  \begin{itemize}
+    \item \textbf{In-place Grid Simulation:} Modifying a matrix without using extra memory by using rows/columns headers as state markers (e.g. Set Matrix Zeroes).
+    \item \textbf{Math \& Coordinate Transformations:} Mirroring, swapping, or transposing grids (e.g. Rotate Image).
+    \item \textbf{Stack Evaluation:} Parsing arithmetic strings or expressions sequentially (e.g. Evaluate Reverse Polish Notation).
+    \item \textbf{Bitmasking or Row/Column hashing:} Validating board boundaries quickly (e.g. Valid Sudoku).
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Set Matrix Zeroes
+\begin{frame}[fragile]{Problem: Spread Zeroes in 2D Array}
+  \textbf{Scenario:}
+  Given an m x n integer matrix, if an element is 0, set its entire row and column to 0 in-place.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[[0,1],[1,1]]} $\rightarrow$ \textbf{Output:} \texttt{[[0,0],[0,1]]}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Valid Sudoku
+\begin{frame}[fragile]{Problem: Validate Sudoku Board State}
+  \textbf{Scenario:}
+  Determine if a 9 x 9 Sudoku `grid` configuration is valid, checking rows, columns, and 3x3 sub-grids.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{grid = ...} $\rightarrow$ \textbf{Output:} \texttt{true/false}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Rotate Image
+\begin{frame}[fragile]{Problem: Rotate 2D Matrix In-Place}
+  \textbf{Scenario:}
+  Given an n x n 2D matrix representing an image, rotate the image by 90 degrees clockwise in-place.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[[1,2],[3,4]]} $\rightarrow$ \textbf{Output:} \texttt{[[3,1],[4,2]]}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: Evaluate Reverse Polish Notation
+\begin{frame}[fragile]{Problem: Postfix Expression Evaluation}
+  \textbf{Scenario:}
+  Evaluate the value of an arithmetic expression in Reverse Polish Notation (RPN), supporting standard operators.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{['4','13','5','/','+']} $\rightarrow$ \textbf{Output:} \texttt{6}
+  \end{itemize}
+\end{frame}

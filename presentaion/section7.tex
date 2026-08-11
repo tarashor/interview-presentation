@@ -1,0 +1,71 @@
+% Section 7 Header
+\section{Pattern 5: Cyclic Sort}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Cyclic Sort Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} When an array contains numbers in a range from $1$ to $n$ (or $0$ to $n$), we can sort it in $O(n)$ time and $O(1)$ auxiliary space.
+    \item \textbf{How it works:} Iterate through the array. If the current number `nums[i]` is not at its correct index (i.e. `nums[i] != i + 1`), swap it with the number at its correct index `nums[nums[i] - 1]`. Repeat this until the correct number is at index `i`, then move to the next index.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Cyclic Sort Mechanics}
+  \begin{itemize}
+    \item \textbf{Index Rule:} A value `val` belongs at index `val - 1` (or index `val` if range is $0$ to $n$).
+    \item \textbf{Loop condition:} We only swap when the target index has a different value:
+      $$\text{nums}[i] \neq \text{nums}[\text{nums}[i] - 1]$$
+    \item \textbf{Complexity analysis:} Although we have a nested loop or repeat swaps at the same index, each swap puts at least one number in its correct position. Thus, at most $N-1$ swaps are performed, leading to $O(N)$ time.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Find All Numbers Disappeared in an Array
+\begin{frame}[fragile]{Problem: Disappeared Numbers in Range}
+  \textbf{Scenario:}
+  Given an array of length n where each element is in the range [1, n], find all integers in that range that do not appear in the array.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[2, 2, 3, 1, 5, 5]} $\rightarrow$ \textbf{Output:} \texttt{[4, 6]}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: First Missing Positive
+\begin{frame}[fragile]{Problem: First Missing Positive Integer}
+  \textbf{Scenario:}
+  Given an unsorted integer array, find the smallest positive integer that is not present in the array. Must run in $O(N)$ time and $O(1)$ auxiliary space.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[3, 2, 0]} $\rightarrow$ \textbf{Output:} \texttt{1}
+    \item \textbf{Input:} \texttt{[7, 8, 9, 1, 2]} $\rightarrow$ \textbf{Output:} \texttt{3}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Find All Duplicates in an Array
+\begin{frame}[fragile]{Problem: Duplicate Elements in Range}
+  \textbf{Scenario:}
+  Given an array of integers `array` of size `limit` where $1 \le \text{array}[i] \le \text{limit}$ and some elements appear twice, find all duplicate elements.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[1, 2, 2, 3, 4, 4, 5]} $\rightarrow$ \textbf{Output:} \texttt{[2, 4]}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Problems dealing with numbers in a continuous range.
+        \item Finding duplicate or missing numbers in an array.
+        \item Finding the first/smallest missing positive number.
+  \end{itemize}
+\end{frame}

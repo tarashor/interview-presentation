@@ -1,0 +1,90 @@
+% Section 4 Header
+\section{Pattern 2: Sliding Window}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Sliding Window Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Maintain a contiguous window over a linear data structure (array/string) that dynamically expands or contracts.
+    \item \textbf{Why it works:} Converts nested $O(n^2)$ loops searching subarrays into a single $O(n)$ pass by reusing computed information.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Dynamic vs. Fixed Window}
+  \begin{itemize}
+    \item \textbf{Fixed Window:} Size $K$ is constant. Move window by adding next element and removing the leftmost.
+    \item \textbf{Dynamic Window:} Size changes.
+      \begin{itemize}
+        \item Expand the window by moving `right` pointer.
+        \item If constraint is violated, contract window by moving `left` pointer until constraint is satisfied again.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Longest Substring Without Repeating Characters Link
+\begin{frame}[fragile]{Problem: Longest Unique Substring}
+  \textbf{Scenario:}
+  Given a string, find the length of the longest contiguous substring that contains only unique characters.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{'pwwkewx'} $\rightarrow$ \textbf{Output:} \texttt{4 ('kewx')}
+    \item \textbf{Input:} \texttt{'ccccc'} $\rightarrow$ \textbf{Output:} \texttt{1 ('c')}
+  \end{itemize}
+\end{frame}
+
+
+
+% Problem 2: Permutation in String Link
+\begin{frame}[fragile]{Problem: Anagram Substring Search}
+  \textbf{Scenario:}
+  Given two strings `text1` and `text2`, determine if `text2` contains a substring that is a permutation (anagram) of `text1`.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{text1 = 'xy', text2 = 'eidyxooo'} $\rightarrow$ \textbf{Output:} \texttt{true}
+    \item \textbf{Input:} \texttt{text1 = 'xy', text2 = 'eidboxoo'} $\rightarrow$ \textbf{Output:} \texttt{false}
+  \end{itemize}
+\end{frame}
+
+
+% Problem 3: Fruit Into Baskets Link
+\begin{frame}[fragile]{Problem: Maximum Segment with Two Types}
+  \textbf{Scenario:}
+  Given an array of items, find the maximum length of a contiguous subarray that contains at most two distinct types of items.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[3, 3, 3, 1, 2, 1, 1, 2, 3]} $\rightarrow$ \textbf{Output:} \texttt{5 (from index 3 to 7: [1, 2, 1, 1, 2])}
+    \item \textbf{Input:} \texttt{[5, 6, 6]} $\rightarrow$ \textbf{Output:} \texttt{3 ('[5, 6, 6]')}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: Minimum Window Substring Link
+\begin{frame}[fragile]{Problem: Smallest Window Containing Subsequence}
+  \textbf{Scenario:}
+  Given strings `text` and `target`, find the minimum length window substring of `text` which contains all characters of `target` (including duplicates). Return empty if no such window exists.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{text = 'EBBANCFECAB', target = 'ABC'} $\rightarrow$ \textbf{Output:} \texttt{'CAB'}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Subarray or substring problems.
+        \item Finding shortest, longest, or target length matching constraint.
+        \item Tracking unique elements/frequencies in a range.
+  \end{itemize}
+\end{frame}

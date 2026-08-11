@@ -1,0 +1,80 @@
+\documentclass{beamer}
+
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{emoji}
+\usepackage{minted} 
+\usepackage{booktabs}
+\usepackage{tikz}
+\usetikzlibrary{positioning} 
+% \usetikzlibrary{fpu}
+
+\usecolortheme{default}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+% Define Kotlin for listings package
+\lstdefinelanguage{Kotlin}{
+  comment=[l]{//},
+  comment=[s]{/*}{*/},
+  morekeywords={package,as,typealias,class,interface,this,super,val,var,fun,for,is,in,throw,try,catch,finally,true,false,null,object,return,when,while,break,continue,do,else,if,import,as,IntArray,intArrayOf,maxOf},
+  sensitive=true,
+  morestring=[b]",
+  morestring=[b]'
+}
+
+% Code Style Setup
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstset{
+    language=Kotlin,
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    basicstyle=\ttfamily\footnotesize,
+    breaklines=true,
+    showstringspaces=false
+}
+
+\title{The Coding Interview Patterns Playbook}
+\author{Taras Goriachko}
+\date{}
+
+\setbeamertemplate{footline}{
+  \hspace*{1em}\insertshortauthor
+  \hfill
+  \insertframenumber/\inserttotalframenumber
+  \hspace*{1em}
+}
+\setbeamertemplate{navigation symbols}{} 
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\input{section1}
+\input{section2}
+\input{section3}
+\input{section4}
+\input{section5}
+\input{section6}
+\input{section7}
+\input{section8}
+\input{section9}
+\input{section10}
+\input{section11}
+\input{section12}
+\input{section13}
+\input{section14}
+\input{section15}
+\input{section16}
+\input{section17}
+\input{section18}
+\input{section19}
+\input{section20}
+\input{section21}
+\input{section22}
+
+\end{document}

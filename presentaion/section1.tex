@@ -1,0 +1,119 @@
+% Section 1 Header
+\section{Course Introduction}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Requirements slide
+\begin{frame}{Requirements}
+  \begin{itemize}
+    \item Basic knowledge of any programming language - ideally Kotlin
+    \item Optional: Understanding of the Gradle build system{*}
+    \item \textbf{Preinstalled on computer:}
+      \begin{itemize}
+        \item IntelliJ IDEA (Community Edition)\textsuperscript{**}
+        \item Java 17\textsuperscript{***}
+      \end{itemize}
+  \end{itemize}
+
+  \vspace{2.0cm}
+  \hrule
+  \vspace{0.3cm}
+  \tiny
+  \textsuperscript{*}\href{Gradle course}{http://udemy.com/course/mastering-gradle/} \\
+  \textsuperscript{*}\href{https://www.jetbrains.com/idea/download/?section=mac}{https://www.jetbrains.com/idea/download/?section=mac} \\
+  \textsuperscript{**}\href{https://adoptium.net/en-GB/temurin/releases/?version=17&os=mac&arch=aarch64&package=jre}{https://adoptium.net/en-GB/temurin/releases/?version=17\&os=mac\&arch=aarch64\&package=jre} \\
+\end{frame}
+
+% Lesson 1
+\begin{frame}{Welcome to the Course}
+  \begin{itemize}
+    \item Why "Patterns" instead of "Problems"? \only<2->{\emoji{brain}}
+    \item Moving from memorization to intuition \only<3->{\emoji{bulb}}
+    \item The 80/20 Rule: 19 patterns solve 80\% of interviews \only<4->{\emoji{chart-increasing}}
+  \end{itemize}
+\end{frame}
+
+% Lesson 2
+\begin{frame}{How to Use This Course Effectively}
+  \begin{itemize}
+    \item \textbf{Course Approach:} We will start by showing the brute-force solution, and then transition to the optimal solution.
+    \item \textbf{In an Interview (Ideal Case):}
+      \begin{enumerate}
+        \item \textbf{Identify:} Recognize pattern triggers in the problem text
+        \item \textbf{Trace:} Dry-run the logic on a small input
+        \item \textbf{Implement:} Code the solution without looking at hints
+      \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+% Lesson 3
+\begin{frame}{Interview Mindset: Thinking in Patterns}
+  \begin{itemize}
+    \item Stop looking at the "Story" (e.g., "Alice has 3 apples...")
+    \item Start looking at the \textbf{Data Flow}
+  \end{itemize}
+  
+  \begin{table}[]
+    \scriptsize
+    \begin{tabular}{ll}
+        \toprule
+        \textbf{Problem Trait} & \textbf{Pattern Strategy} \\ \midrule
+        Finding a sub-segment in a list & Sliding Window \\
+        Searching a sorted range & Binary Search \\
+        Shortest path in unweighted graph & BFS \\ \bottomrule
+    \end{tabular}
+  \end{table}
+\end{frame}
+  
+\input{chart}
+
+% Lesson 5
+\begin{frame}{Common Interview Mistakes}
+  \begin{itemize}
+    \item \textbf{Mistake 1:} Starting to code before the logic is 100\% clear \only<2->{\emoji{cross-mark}}
+    \item \textbf{Mistake 2:} When stuck: avoiding brute force and trying to guess optimal solution \only<3->{\emoji{cross-mark}}
+    \item \textbf{Mistake 3:} Forgetting to state Big O complexity \only<4->{\emoji{cross-mark}}
+    \item \textbf{Mistake 4:} Not testing for $n=0$ or $n=1$ \only<5->{\emoji{cross-mark}}
+    \item \textbf{Mistake 5:} Not listening to the interviewer \only<6->{\emoji{cross-mark}}
+  \end{itemize}
+  \vspace{0.3cm}
+  \textbf{Correction:} Think out loud. Your interviewer is your collaborator, not your judge.
+\end{frame}
+
+% Summary
+\begin{frame}{Course Structure}
+  \scriptsize
+  \begin{columns}[t]
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Pattern 1: Two Pointers Pattern
+        \item Pattern 2: Sliding Window
+        \item Pattern 3: Monotonic Stack
+        \item Pattern 4: Prefix Sum \& Cumulative
+        \item Pattern 5: Cyclic Sort
+        \item Pattern 6: Merge Intervals
+        \item Pattern 7: Modified Binary Search
+        \item Pattern 8: Fast \& Slow Pointers
+        \item Pattern 9: Tree Depth First Search (DFS)
+        \item Pattern 10: Tree Breadth First Search (BFS)
+      \end{itemize}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{itemize}
+        \item Pattern 11: Matrix Traversal (Islands)
+        \item Pattern 12: Union-Find (Disjoint Set)
+        \item Pattern 13: Top `K' Elements (Heap)
+        \item Pattern 14: Dynamic Programming
+        \item Pattern 15: Backtracking \& DFS
+        \item Pattern 16: Greedy Algorithms
+        \item Pattern 17: Data Streams \& Online
+        \item Pattern 18: Advanced Patterns
+        \item Pattern 19: Miscellaneous Techniques
+      \end{itemize}
+    \end{column}
+  \end{columns}
+\end{frame}

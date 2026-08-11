@@ -1,0 +1,68 @@
+% Section 20 Header
+\section{Pattern 18: Advanced Patterns}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{Advanced Algorithmic Patterns}
+  For Senior and Staff level roles, interviewers often present advanced structures:
+  \begin{itemize}
+    \item \textbf{Segment Tree:} A binary tree used for storing intervals or segments. It allows querying a range (sum, min, max) and modifying elements in $O(\log N)$ time.
+    \item \textbf{Topological Sort:} Ordering vertices in a directed acyclic graph (DAG) such that for every directed edge $uv$, vertex $u$ comes before $v$. (Kahn's BFS or DFS).
+    \item \textbf{Sweep Line:} A geometry paradigm that solves range/interval problems by sorting boundary events (start/end) and sweeping a imaginary line across them.
+    \item \textbf{Trie (Prefix Tree):} A search tree used to store associative keys (typically strings) efficiently. Excellent for autocompletion, spelling checkers, prefix matching.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Segment Tree
+\begin{frame}[fragile]{Problem: Dynamic Array Range Sum Query}
+  \textbf{Scenario:}
+  Given an array, implement a structure to calculate range sum queries [left, right] and update elements at index in logarithmic time.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{array = [2,4,6], sumRange(1,2), update(1,5), sumRange(1,2)} $\rightarrow$ \textbf{Output:} \texttt{10, then 11}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Topological Sort
+\begin{frame}[fragile]{Problem: Course Dependency Resolution}
+  \textbf{Scenario:}
+  Determine if you can finish all courses given the `coursesCount` and prerequisite `dependencies`.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{coursesCount = 3, dependencies = [[1,0],[2,1]]} $\rightarrow$ \textbf{Output:} \texttt{true}
+    \item \textbf{Input:} \texttt{coursesCount = 3, dependencies = [[1,0],[2,1],[0,2]]} $\rightarrow$ \textbf{Output:} \texttt{false}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Sweep Line
+\begin{frame}[fragile]{Problem: Outline of Bounded Buildings}
+  \textbf{Scenario:}
+  Given building locations and heights, return the key points that outline the collective skyline contour.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[[1,3,5],[2,4,6]]} $\rightarrow$ \textbf{Output:} \texttt{[[1,5],[2,6],[4,0]]}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: Tries
+\begin{frame}[fragile]{Problem: Prefix Tree Implementation}
+  \textbf{Scenario:}
+  Implement a trie (prefix tree) with insert, search, and startsWith methods.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{insert('cat'), search('cat'), startsWith('ca'), search('cap')} $\rightarrow$ \textbf{Output:} \texttt{true, true, false}
+  \end{itemize}
+\end{frame}

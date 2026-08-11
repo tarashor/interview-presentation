@@ -1,0 +1,88 @@
+% Section 12 Header
+\section{Pattern 10: Tree Breadth First Search (BFS)}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{Tree Breadth First Search (BFS)}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Traverse a tree level-by-level, processing all nodes at depth $d$ before any node at depth $d+1$.
+    \item \textbf{Implementation:} Typically implemented iteratively using a Queue (FIFO).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Level Size Strategy}
+  To process nodes level by level rather than as a continuous queue stream:
+  \begin{itemize}
+    \item At the start of each level iteration, count the queue size: `val levelSize = queue.size`.
+    \item Run a nested loop exactly `levelSize` times.
+    \item Inside the loop:
+      \begin{itemize}
+        \item Pop a node from the queue.
+        \item Enqueue its children (left, then right).
+      \end{itemize}
+    \item Any logic scoped to a level (e.g., calculating level average or reversing order) can be done cleanly.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Binary Tree Level Order Traversal
+\begin{frame}[fragile]{Problem: Level-by-Level Tree Traversal}
+  \textbf{Scenario:}
+  Given a binary tree, return the level order traversal of its nodes' values (from left to right, level by level).
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[1, 2, 3, 4, null, null, 5]} $\rightarrow$ \textbf{Output:} \texttt{[[1], [2, 3], [4, 5]]}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Binary Tree Zigzag Level Order Traversal
+\begin{frame}[fragile]{Problem: Zigzag Level Order Traversal}
+  \textbf{Scenario:}
+  Given a binary tree, return the zigzag level order traversal of its nodes' values (left-to-right, then right-to-left for the next level, and alternate).
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[1, 2, 3, 4, null, null, 5]} $\rightarrow$ \textbf{Output:} \texttt{[[1], [3, 2], [4, 5]]}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Populating Next Right Pointers in Each Node
+\begin{frame}[fragile]{Problem: Connecting Right Neighbors in Tree}
+  \textbf{Scenario:}
+  Given a perfect binary tree, populate each next pointer to point to its next right node. If there is no next right node, set it to NULL.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[8, 9, 10]} $\rightarrow$ \textbf{Output:} \texttt{[8, \#, 9, 10, \#]}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: Word Ladder
+\begin{frame}[fragile]{Problem: Word Transformation Sequence}
+  \textbf{Scenario:}
+  Given two words (`startWord`, `endWord`) and a list of words `wordList`, find the length of the shortest transformation sequence from `startWord` to `endWord`, changing one letter at a time.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{startWord = 'cat', endWord = 'dog', wordList = ['pat','pot','dot','dog']} $\rightarrow$ \textbf{Output:} \texttt{5}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Level order traversals or printing.
+        \item Finding the minimum depth of a tree.
+        \item Tracking "level" boundaries (e.g. connecting next pointers).
+        \item Finding the shortest path in unweighted graphs or state transitions.
+  \end{itemize}
+\end{frame}

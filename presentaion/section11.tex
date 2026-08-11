@@ -1,0 +1,96 @@
+% Section 11 Header
+\section{Pattern 9: Tree Depth First Search (DFS)}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{Tree Depth First Search (DFS)}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} Explore as deep as possible along each branch of a tree before backtracking.
+    \item \textbf{Implementation:} Typically implemented using recursion (which uses the call stack implicitly) or an explicit Stack.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{DFS Traversal Types}
+  Depending on when the current node is processed relative to its children:
+  \begin{itemize}
+    \item \textbf{Pre-order (Root, Left, Right):} Processing parent before children. Useful for copying trees or serialization.
+    \item \textbf{In-order (Left, Root, Right):} Processing left child, then parent, then right child. Yields sorted keys in a Binary Search Tree (BST).
+    \item \textbf{Post-order (Left, Right, Root):} Processing children before parent. Useful for bottom-up computation (e.g., node height, subproblem accumulation).
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Path Sum
+\begin{frame}[fragile]{Problem: Root-to-Leaf Target Sum}
+  \textbf{Scenario:}
+  Given a binary `tree` and a `target` value, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals `target`.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{tree = [1, 2, 3], target = 3} $\rightarrow$ \textbf{Output:} \texttt{true}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Path Sum III
+\begin{frame}[fragile]{Problem: Any-Path Sum Count}
+  \textbf{Scenario:}
+  Given a binary `tree` and a `target` value, find the number of paths that sum to `target`. The path does not need to start at the root or end at a leaf, but must go downwards.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{tree = [5, 3, 2, 3, -2, null, 1], target = 8} $\rightarrow$ \textbf{Output:} \texttt{2}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Validate Binary Search Tree
+\begin{frame}[fragile]{Problem: Validate Binary Search Tree Structure}
+  \textbf{Scenario:}
+  Determine if a given binary tree is a valid Binary Search Tree (BST), where left children are smaller and right children are larger.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[10, 5, 15]} $\rightarrow$ \textbf{Output:} \texttt{true}
+    \item \textbf{Input:} \texttt{[10, 5, 15, null, null, 6, 20]} $\rightarrow$ \textbf{Output:} \texttt{false}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: Lowest Common Ancestor of a Binary Tree
+\begin{frame}[fragile]{Problem: Lowest Common Ancestor}
+  \textbf{Scenario:}
+  Find the lowest common ancestor node of two given targets (`target1`, `target2`) in a binary `tree`.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{tree = [3,5,1,6,2,0,8], target1 = 6, target2 = 2} $\rightarrow$ \textbf{Output:} \texttt{5}
+  \end{itemize}
+\end{frame}
+
+% Problem 5: Binary Tree Maximum Path Sum
+\begin{frame}[fragile]{Problem: Maximum Path Sum in Tree}
+  \textbf{Scenario:}
+  Find the maximum path sum in a binary tree, where a path is any sequence of nodes from some starting node to any node in the tree along parent-child connections.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[-10, 9, 10, null, null, 8, 2]} $\rightarrow$ \textbf{Output:} \texttt{20}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Finding paths that sum to a target value.
+        \item Computing properties of nodes recursively (height, balance).
+        \item Validating BST properties.
+        \item Exploring combinations/subtrees.
+  \end{itemize}
+\end{frame}

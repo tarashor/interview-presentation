@@ -1,0 +1,90 @@
+% Section 17 Header
+\section{Pattern 15: Backtracking \& DFS}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Backtracking Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} A systematic search algorithm that builds candidate solutions incrementally, and abandons a candidate ("backtracks") as soon as it determines the candidate cannot lead to a valid solution.
+    \item \textbf{How it works (The Three Steps):}
+      \begin{enumerate}
+        \item \textbf{Choose:} Add an element to the current path.
+        \item \textbf{Explore:} Recursively call the search function with the new state.
+        \item \textbf{Unchoose (Backtrack):} Remove the element from the current path to return to the previous state.
+      \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Generate Parentheses
+\begin{frame}[fragile]{Problem: Well-Formed Parentheses Combinations}
+  \textbf{Scenario:}
+  Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{2} $\rightarrow$ \textbf{Output:} \texttt{['(())', '()()']}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Combination Sum
+\begin{frame}[fragile]{Problem: Combination Sum to Target}
+  \textbf{Scenario:}
+  Given an array of distinct integer `values` and a target integer `target`, return a list of all unique combinations of `values` that sum to `target`.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{values = [3,4,5], target = 8} $\rightarrow$ \textbf{Output:} \texttt{[[3,5],[4,4]]}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Palindrome Partitioning
+\begin{frame}[fragile]{Problem: Palindrome Substring Partitions}
+  \textbf{Scenario:}
+  Given a string, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{'aba'} $\rightarrow$ \textbf{Output:} \texttt{[['a','b','a'],['aba']]}
+  \end{itemize}
+\end{frame}
+
+% Problem 4: Word Search
+\begin{frame}[fragile]{Problem: Word Grid Search}
+  \textbf{Scenario:}
+  Given an m x n `matrix` of characters and a string `word`, return true if `word` exists in the matrix. The word can be constructed from letters of sequentially adjacent cells.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{matrix = [['A','B'],['C','D']], word = 'ACD'} $\rightarrow$ \textbf{Output:} \texttt{true}
+  \end{itemize}
+\end{frame}
+
+% Problem 5: N-Queens
+\begin{frame}[fragile]{Problem: N-Queens Placement}
+  \textbf{Scenario:}
+  Place n queens on an n x n chessboard such that no two queens attack each other. Return all distinct solutions.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{1} $\rightarrow$ \textbf{Output:} \texttt{[['Q']]}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Generating all permutations, combinations, or subsets.
+        \item Solving constraint satisfaction puzzles (e.g. N-Queens, Sudoku).
+        \item Exploring word combinations on a grid.
+  \end{itemize}
+\end{frame}

@@ -1,0 +1,75 @@
+% Section 14 Header
+\section{Pattern 12: Union-Find (Disjoint Set)}
+
+\begin{frame}[c]{\empty}
+    \begin{center}
+        \Large\textbf{\secname}
+    \end{center}
+\end{frame}
+
+% Slide 1: Concept
+\begin{frame}{What is the Union-Find Pattern?}
+  \begin{itemize}
+    \item \textbf{The Core Idea:} A data structure that tracks partition of a set into disjoint subsets.
+    \item \textbf{Operations:}
+      \begin{itemize}
+        \item \textbf{Find:} Identify which subset an element belongs to (returns root parent).
+        \item \textbf{Union:} Join two disjoint subsets into a single subset.
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Optimizations: Path Compression \& Union by Rank}
+  Without optimization, a tree can become a line ($O(N)$ lookup).
+  \begin{itemize}
+    \item \textbf{Path Compression:} During `find(x)`, make every node in the search path point directly to the root root. This flattens the tree structure:
+      $$\text{parent}[x] = \text{find}(\text{parent}[x])$$
+    \item \textbf{Union by Rank/Size:} Always attach the smaller tree under the root of the larger tree.
+    \item \textbf{Complexity:} Combined, they achieve nearly constant time operations: $O(\alpha(N))$ where $\alpha$ is the Inverse Ackermann function.
+  \end{itemize}
+\end{frame}
+
+% Problem 1: Number of Provinces
+\begin{frame}[fragile]{Problem: Connected Components in Network}
+  \textbf{Scenario:}
+  Given an `adjacencyMatrix` representing relationships (e.g. friendship), find the total number of connected groups/components in the network.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{adjacencyMatrix = [[1,0,0],[0,1,0],[0,0,1]]} $\rightarrow$ \textbf{Output:} \texttt{3}
+  \end{itemize}
+\end{frame}
+
+% Problem 2: Redundant Connection
+\begin{frame}[fragile]{Problem: Locating Cycle-Creating Edge}
+  \textbf{Scenario:}
+  Given an undirected graph with n nodes and n edges containing exactly one cycle, find the edge that can be removed to turn the graph into a tree.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[[1,2], [2,3], [1,3], [3,4]]} $\rightarrow$ \textbf{Output:} \texttt{[1,3]}
+  \end{itemize}
+\end{frame}
+
+% Problem 3: Accounts Merge
+\begin{frame}[fragile]{Problem: Merging Overlapping Identifiers}
+  \textbf{Scenario:}
+  Given a list of accounts with names and emails, merge accounts that share common emails, returning a sorted list of merged emails.
+  
+  \vspace{0.3cm}
+  \textbf{Examples:}
+  \begin{itemize}
+    \item \textbf{Input:} \texttt{[['Alex','x@m.com'], ['Alex','y@m.com'], ['Alex','x@m.com','y@m.com']]} $\rightarrow$ \textbf{Output:} \texttt{[['Alex','x@m.com','y@m.com']]}
+  \end{itemize}
+\end{frame}
+
+% Common Triggers Slide
+\begin{frame}{\secname\ -- Common Triggers}
+  \begin{itemize}
+    \item Dynamic connectivity (are nodes $X$ and $Y$ in the same group?).
+        \item Detecting cycles in undirected graphs.
+        \item Merging accounts, groups, or equivalence sets.
+  \end{itemize}
+\end{frame}
